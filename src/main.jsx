@@ -10,7 +10,7 @@ import {
 const router = createBrowserRouter([
   {
     path: '/', //Såhär ser det ut för att komma till hemsidan
-    element: <div>Hejsan allihopa :D</div>
+    element: <div>Hejsan allihopa :D</div> 
   }
 ])
 
