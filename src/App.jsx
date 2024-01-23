@@ -4,7 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 
-//Hola
 function App() {
   const [count, setCount] = useState(0)
 
@@ -35,5 +34,3 @@ function App() {
 }
 
 export default App
-
-/* halloj allesammans :D */
