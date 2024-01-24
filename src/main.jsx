@@ -2,15 +2,31 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import {
-  createBrowserRouter,
-  RouterProvider
-} from 'react-router-dom'
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import Home from './pages/Home.jsx'
+import Contact from './pages/Contact.jsx'
+import AboutUs from './pages/AboutUs.jsx'
+import Product from './pages/Products.jsx'
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
+import Footer2 from './components/Footer2.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/', //Såhär ser det ut för att komma till hemsidan
-    element: <div>Hejsan allihopa :D</div> 
+    element: <Home/>
+  },
+  {
+    path: '/contact',
+    element: <Contact/>
+  },
+  {
+    path: '/aboutUs',
+    element: <AboutUs/>
+  },
+  {
+    path: '/products/:id',
+    element: <Product/>
   }
 ])
 
@@ -32,7 +48,9 @@ Skrivs såhär i navigationsbaren/headern:
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <Header/>
     <RouterProvider router={router} />
+    <Footer/>
+    <Footer2/>
   </React.StrictMode>,
 )
