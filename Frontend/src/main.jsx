@@ -5,7 +5,7 @@ import Home from './pages/Home.jsx'
 import Contact from './pages/Contact.jsx'
 import AboutUs from './pages/AboutUs.jsx'
 import Product from './pages/Products.jsx'
-import Header from './components/Navbar.jsx'
+import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Footer2 from './components/Footer2.jsx'
 import './pages/products.css'
@@ -47,7 +47,7 @@ Skrivs såhär i navigationsbaren/headern:
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Header/>
+    <Navbar/>
     <RouterProvider router={router} />
     <Footer/>
     <Footer2/>
