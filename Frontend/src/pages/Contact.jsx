@@ -1,5 +1,11 @@
-//Bashir
+const Contact = () => {
 
-//git add .
-//git commit -m ""
-//git push
+    return (
+        
+        <div>
+            <h1>En kontakt sida</h1>
+        </div>
+    )
+}
+
+export default Contact

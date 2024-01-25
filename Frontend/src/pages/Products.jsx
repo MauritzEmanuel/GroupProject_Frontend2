@@ -11,7 +11,7 @@ const Product = () => {
     return (
         
         <div>
-            <h1>En produkt sida</h1>
+            <h1>En produktsida</h1>
         </div>
     )
 }

@@ -1,14 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Contact from './pages/Contact.jsx'
 import AboutUs from './pages/AboutUs.jsx'
 import Product from './pages/Products.jsx'
-import Header from './components/Header.jsx'
+import Header from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Footer2 from './components/Footer2.jsx'
+import './pages/products.css'
 
 const router = createBrowserRouter([
   {
@@ -53,3 +53,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Footer2/>
   </React.StrictMode>,
 )
+
+
