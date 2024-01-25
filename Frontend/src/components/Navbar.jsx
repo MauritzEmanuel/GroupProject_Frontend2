@@ -1,11 +1,11 @@
-const Head = () => {
+const Navbar = () => {
 
     return (
         
         <div>
-            <h1>Ett huvud</h1>
+            <h1>En navbar</h1>
         </div>
     )
 }
 
-export default Head
+export default Navbar
