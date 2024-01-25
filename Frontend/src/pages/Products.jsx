@@ -6,7 +6,7 @@ import axios from "axios"
 const Product = () => {
 
     const getData = async () => {
-        const data = await axios.get(`https://localhost:1337/api/products`, { headers: {}})
+        const data = await axios.get(`http://localhost:1337/api/products/`)
         console.log(data);
     }
 
