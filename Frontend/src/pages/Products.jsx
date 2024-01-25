@@ -1,12 +1,12 @@
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+// import { useEffect } from "react";
+// import { useParams } from "react-router-dom";
 
 
 const Product = () => {
 
-    useEffect(() => {
-        fetch(`https://localhost:1337/api/products/${useParams().id}`)
-    }, [])
+    // useEffect(() => {
+    //     fetch(`https://localhost:1337/api/products/${useParams().id}`)
+    // }, [])
 
     return (
         
