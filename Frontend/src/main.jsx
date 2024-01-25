@@ -48,6 +48,22 @@ Skrivs såhär i navigationsbaren/headern:
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Navbar/>
+    <nav>
+      <ul>
+        <li>
+          <a href={`/`}>Home</a>
+        </li>
+        <li>
+          <a href={`/contact`}>Contact</a>
+        </li>
+        <li>
+          <a href={`/aboutUs`}>About Us</a>
+        </li>
+        <li>
+          <a href={`/products/:id`}>Products</a>
+        </li>
+      </ul>
+    </nav>
     <RouterProvider router={router} />
     <Footer/>
     <Footer2/>
