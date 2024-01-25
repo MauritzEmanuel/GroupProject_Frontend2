@@ -1,12 +1,19 @@
-// import { useEffect } from "react";
-// import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios"
 
 
 const Product = () => {
 
-    // useEffect(() => {
-    //     fetch(`https://localhost:1337/api/products/${useParams().id}`)
-    // }, [])
+    const getData = async () => {
+        const data = await axios.get(`https://localhost:1337/api/products`, { headers: {}})
+        console.log(data);
+    }
+
+    
+    useEffect(() => {
+        getData()
+    }, [])
 
     return (
         
