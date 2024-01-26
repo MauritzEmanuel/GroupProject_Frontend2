@@ -8,7 +8,7 @@ import Product from './pages/Products.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Footer2 from './components/Footer2.jsx'
-import './pages/products.css'
+
 
 const router = createBrowserRouter([
   {
