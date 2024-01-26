@@ -1,0 +1,30 @@
+* {
+    font-family: inter;
+}
+
+.flex {
+    display: flex;
+}
+
+.navbar {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.ul-nav {
+    list-style-type: none;
+    gap: .8em;
+    width: 100%;
+}
+
+.li-nav {
+    flex-direction: column;
+    align-items: center;
+    color: #325119;
+}
+
+.image-nav {
+    width: 200px;
+    height: 100px;
+}
