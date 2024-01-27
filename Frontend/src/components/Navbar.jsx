@@ -27,7 +27,9 @@ const Navbar = () => {
                         <li className='li-nav flex'>
                             <a href={`/products/:id`}>Produkter</a>
                         </li>
+                        <input type="text" placeholder="Sök böcker..."/>
                     </ul>
+
                 </nav>
             </header>
         </>
