@@ -4,32 +4,38 @@ import Logo from '../assets/Images/Logo/Logo-time-travelers.png'
 
 const Navbar = () => {
 
+    const navStyles = {
+        
+    }
+
     return (
         <>
             <header>
 
-                <h1>Historybook Store</h1>
                 <nav className='navbar flex'>
                     <div>
                         <img className='image-nav flex' src={Logo} alt="Logo" />
                     </div>
-                    
-                    <ul className='ul-nav flex'>
-                        <li className='li-nav flex'>
-                            <a href={`/`}>Hem</a>
-                        </li>
-                        <li className='li-nav flex'>
-                            <a href={`/contact`}>Kontakt</a>
-                        </li>
-                        <li className='li-nav flex'>
-                            <a href={`/aboutUs`}>Om Oss</a>
-                        </li>
-                        <li className='li-nav flex'>
-                            <a href={`/products/:id`}>Produkter</a>
-                        </li>
-                        <input type="text" placeholder="Sök böcker..."/>
-                    </ul>
 
+                    <div className='div-su-nav'>
+                        <div className='search-nav flex'>
+                            <input placeholder="Sök böcker, författare..." role="combobox" aria-autocomplete="list" aria-label="Sök" aria-activedescendant="" aria-expanded="false" type="text"/>
+                        </div>
+                        <ul className='ul-nav flex'>
+                            <li>
+                                <a href={`/`}>Hem</a>
+                            </li>
+                            <li>
+                                <a href={`/contact`}>Kontakt</a>
+                            </li>
+                            <li>
+                                <a href={`/aboutUs`}>Om Oss</a>
+                            </li>
+                            <li>
+                                <a href={`/products/:id`}>Produkter</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </header>
         </>
