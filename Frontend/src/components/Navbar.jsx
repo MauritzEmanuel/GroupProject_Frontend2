@@ -20,6 +20,11 @@ const Navbar = () => {
                     <div className='div-su-nav'>
                         <div className='search-nav flex'>
                             <input placeholder="Sök böcker, författare..." role="combobox" aria-autocomplete="list" aria-label="Sök" aria-activedescendant="" aria-expanded="false" type="text"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" width="24" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#808080" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M21 21l-6 -6" />
+                            </svg>
                         </div>
                         <ul className='ul-nav flex'>
                             <li>

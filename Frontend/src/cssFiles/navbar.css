@@ -23,26 +23,32 @@
     list-style-type: none;
     margin-top: auto;
     width: 100%;
+    position: relative;
+    align-items: center;
 }
   .search-nav input {
-    height: 2.25em;
-    width: 20em;
+    height: 2.5em;
+    width: 27em;
     background-color: #edf3f8;
     border-radius: .4em;
     text-indent: 2.2rem;
+    font-size: medium;
     border: none;
     transition: border 0.3s;
   }
     .search-nav input:hover {
         border: 1px solid green;
     }
+  .search-nav svg {
+    position: absolute;
+  }
 
 .ul-nav {
     justify-content: center;
     list-style-type: none;
     margin-bottom: auto;
     width: 100%;
-    gap: 5em;
+    gap: 10em;
 }
   .ul-nav li {
     flex-direction: column;
