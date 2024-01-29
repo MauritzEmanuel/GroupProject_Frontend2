@@ -3,6 +3,7 @@
 }
 
 .navbar {
+    display: flex;
     align-items: center;
     width: 100%;
 }
@@ -11,6 +12,8 @@
     width: 200px;
     height: 100px;
 }
+
+
 
 .div-su-nav {
     justify-content: center;
@@ -25,6 +28,7 @@
     width: 100%;
     position: relative;
     align-items: center;
+    margin-left: 2.5em;
 }
   .search-nav input {
     height: 2.5em;
@@ -40,7 +44,8 @@
         border: 1px solid green;
     }
   .search-nav svg {
-    position: absolute;
+      position: absolute;
+      margin-left: 22em;
   }
 
 .ul-nav {
@@ -48,21 +53,45 @@
     list-style-type: none;
     margin-bottom: auto;
     width: 100%;
-    gap: 10em;
+    gap: 5em;
 }
   .ul-nav li {
+      display: flex;
     flex-direction: column;
-    font-size: 18px;
-    color: #325119;
-    height: 20;
+    font-size: 20px;
+      height: 25px;
+      width: 100px;
+      border-radius: 20px;
   }
   .ul-nav a {
+      margin-top: 1px;
     text-decoration: none;
-    color: inherit;
+    color: #325119;
     cursor: pointer;
+      text-align: center;
+      height: 25px;
   }
     .ul-nav a:hover {
-        text-decoration: underline;
+        color: white;
+    }
+
+    .ul-nav li:hover{
+        background-color: #325119;
+    }
+
+.InvisibleBox{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+}
+
+    .InvisibleBox svg{
+        width: 60px;
+    }
+
+    .InvisibleBox svg:hover{
+        background-color: #325119;
     }
 
 
