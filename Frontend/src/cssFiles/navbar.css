@@ -36,10 +36,10 @@
     font-size: medium;
     border: none;
     transition: border 0.3s;
-      text-align: center;
+    text-align: center;
   }
     .search-nav input:hover {
-      border: 1px solid green;
+      border: 1px solid #325119;
     }
   .search-nav svg {
       position: absolute;
