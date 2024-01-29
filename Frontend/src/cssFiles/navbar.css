@@ -83,12 +83,23 @@
     width: 200px;
     height: 100px;
 }
-  .InvisibleBox svg{
-    width: 60px;
-  }
-    .InvisibleBox svg:hover{
-      background-color: #325119;
-    }
 
+.Circle{
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
 
+.Circle svg{
+    width: 45px;
+    z-index: 2;
+}
 
+.Circle:hover{
+    background-color: #325119;
+    cursor: pointer;
+}
