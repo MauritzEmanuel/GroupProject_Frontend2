@@ -70,12 +70,12 @@
     cursor: pointer;
     text-align: center;
   }
-    .ul-nav a:hover {
-      color: white;
-    }
 
     .ul-nav li:hover{
       background-color: #325119;
+        a{
+            color: white;
+        }
     }
 
 .InvisibleBox{
