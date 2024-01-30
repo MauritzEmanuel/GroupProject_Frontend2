@@ -102,4 +102,7 @@
 .Circle:hover{
     background-color: #325119;
     cursor: pointer;
+    .Circle svg{
+        fill: red;
+    }
 }
