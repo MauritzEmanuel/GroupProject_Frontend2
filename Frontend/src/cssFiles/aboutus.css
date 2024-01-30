@@ -1,0 +1,64 @@
+
+
+.about-us-container h1 {
+    /* Styles for the h1 element inside the base container */
+    color: black;
+    text-align: center;
+}
+
+.about-us-container p {
+    /* Styles for the p element inside the base container */
+    font-size: 16px;
+    text-align: center;
+    color: black;  
+    
+   
+   
+}
+.about-us-container .paragraftvå {
+    /* Styles for the paragraph with the class 'paragraftvå' */
+    font-size: 18px;
+    font-style: italic;
+    color: black;
+    text-align: left; 
+    margin-left: 700px;
+
+}
+.about-us-container .paragraftre{
+    font-size: 18px;
+    font-style: italic;
+    color: black;
+    text-align: left; 
+    margin-right: 700px;
+    padding: 100px;
+
+
+}
+.about-us-container .paragraffyra{
+    font-size: 18px;
+    font-style: italic;
+    color: black;
+    text-align: left; 
+    margin-left: 700px;
+    margin-top: -248px;
+        
+
+}
+.about-us-container .paragraffem{
+    font-size: 18px;
+    font-style: italic;
+    color: black;
+    text-align: left; 
+    margin-right: 700px;
+    padding: 100px;
+
+}
+
+.about-us-container .paragrafsex{
+color:black;
+font-size: 18px;
+text-align:center;
+margin-left: 400px;
+margin-right: 400px;
+
+}

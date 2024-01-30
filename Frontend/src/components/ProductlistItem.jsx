@@ -1,11 +1,13 @@
-const ProductList = () => {
+import React from "react";
 
-    return (
-        
-        <div>
-            <h1>En fot</h1>
-        </div>
-    )
+const ProductListItem = ({ product }) => {
+    <li key={product.id}>
+        <h2>{product.Title}</h2>
+        <h3>{product.Auther}</h3>
+        <p>{product.Image}</p>
+        <p>{product.Description}</p>
+        <p>Pris: {product.price} KR</p>
+    </li>
 }
 
-export default ProductList
+export default ProductListItem

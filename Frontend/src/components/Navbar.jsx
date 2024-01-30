@@ -28,16 +28,19 @@ const Navbar = () => {
                         </div>
                         <ul className='ul-nav flex'>
                             <li>
-                                <a href={`/`}>Hem</a>
+                                <a href={`/`}>Bästa Säljare</a>
                             </li>
                             <li>
-                                <a href={`/contact`}>Kontakt</a>
+                                <a href={`/products/:id`}>Produkter</a>
+                            </li>
+                            <li>
+                                <a href={`/categories`}>Kategorier</a>
                             </li>
                             <li>
                                 <a href={`/aboutUs`}>Om Oss</a>
                             </li>
                             <li>
-                                <a href={`/products/:id`}>Produkter</a>
+                                <a href={`/contact`}>Kontakta Oss</a>
                             </li>
                         </ul>
                     </div>
@@ -54,6 +57,12 @@ const Navbar = () => {
                         </div>
                     </div>
                 </nav>
+
+                {/* <div id="shopping-cart-div" class="wrapper">
+                    <h2>Varukorg<button id="exit-cart-button">X</button></h2>
+                    <ul id="cart-items"></ul>
+                    <p id="total-price">Totalt: 0 kr</p> <button>Betala</button>
+                </div> */}
             </header>
         </>
     )
