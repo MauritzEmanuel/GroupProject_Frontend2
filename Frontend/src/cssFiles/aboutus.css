@@ -1,64 +1,69 @@
+/* Add these styles to your existing CSS file */
 
+.about-us-container {
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+}
 
 .about-us-container h1 {
-    /* Styles for the h1 element inside the base container */
-    color: black;
-    text-align: center;
+    margin: 0;
+    font-size: 2.5em;
+    color: #333;
 }
 
 .about-us-container p {
-    /* Styles for the p element inside the base container */
-    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.5;
     text-align: center;
-    color: black;  
-    
-   
-   
 }
-.about-us-container .paragraftvå {
-    /* Styles for the paragraph with the class 'paragraftvå' */
+
+.about-us-container .horizontal-section {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    flex-wrap: wrap;
+}
+
+.about-us-container .horizontal-content {
+    max-width: 300px;
+    text-align: left;
+    margin: 10px; /* Adjust the margin as needed */
+}
+
+.about-us-container h2,
+.about-us-container h3,
+.about-us-container h4 {
+    font-size: 1.8em;
+}
+
+.about-us-container .paragraftvå,
+.about-us-container .paragrafsex {
+    display: block;
+    margin: 20px auto; /* Add some margin for spacing */
+    max-width: 600px;
     font-size: 18px;
-    font-style: italic;
-    color: black;
-    text-align: left; 
-    margin-left: 700px;
-
+    line-height: 1.5;
+    text-align: left; /* Align paragraphs to the left */
 }
-.about-us-container .paragraftre{
+
+.about-us-container .paragraftre,
+.about-us-container .paragraffyra {
+    display: block;
+    margin: 20px auto; /* Move paragraphs 3 and 4 down */
+    max-width: 600px;
     font-size: 18px;
-    font-style: italic;
-    color: black;
-    text-align: left; 
-    margin-right: 700px;
-    padding: 100px;
-
-
+    line-height: 1.5;
+    text-align: left; /* Align paragraphs to the left */
 }
-.about-us-container .paragraffyra{
+
+.about-us-container .paragraffem {
+    display: block;
+    margin: 20px auto; /* Add some margin for spacing */
+    max-width: 600px;
     font-size: 18px;
-    font-style: italic;
-    color: black;
-    text-align: left; 
-    margin-left: 700px;
-    margin-top: -248px;
-        
-
-}
-.about-us-container .paragraffem{
-    font-size: 18px;
-    font-style: italic;
-    color: black;
-    text-align: left; 
-    margin-right: 700px;
-    padding: 100px;
-
-}
-
-.about-us-container .paragrafsex{
-color:black;
-font-size: 18px;
-text-align:center;
-margin-left: 400px;
-margin-right: 400px;
-
+    line-height: 1.5;
+    text-align: left; /* Align paragraph 5 to the left */
 }
