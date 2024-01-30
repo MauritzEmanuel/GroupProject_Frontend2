@@ -1,0 +1,64 @@
+
+
+.subscribe-section {
+  position: relative;
+  align-items: end;
+  margin: 0;
+  background-color: #b7c3ae;
+  padding: 40px 0;
+  }
+  
+  .subscribe-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .left {
+    flex: 1;
+    color: #325119;
+
+    h1{
+      margin: 0;
+    }
+
+    h3{
+      margin: 0;
+      font-weight: lighter;
+    }
+  }
+  
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  
+    form {
+      display: flex;
+      align-items: center;
+  
+      input {
+        padding: 10px;
+        border: none;
+        border-radius: 10px 0 0 10px;
+      }
+  
+      button {
+        padding: 10px 20px;
+        background-color: #325119;
+        color: white;
+        border: none;
+        border-radius: 0 10px 10px 0;
+        cursor: pointer;
+      }
+    }
+  }
+  
+
+
+
+
+  

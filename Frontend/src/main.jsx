@@ -7,8 +7,6 @@ import AboutUs from './pages/AboutUs.jsx'
 import Product from './pages/Products.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
-import Subscribe from './components/Subscribe.jsx'
-
 
 const router = createBrowserRouter([
   {
@@ -33,7 +31,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
     <Navbar/>
     <RouterProvider router={router}/>
-    <Subscribe/>
     <Footer/>
   </React.StrictMode>,
 )
