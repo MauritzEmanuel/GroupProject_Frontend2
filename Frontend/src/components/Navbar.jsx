@@ -57,6 +57,12 @@ const Navbar = () => {
                         </div>
                     </div>
                 </nav>
+
+                {/* <div id="shopping-cart-div" class="wrapper">
+                    <h2>Varukorg<button id="exit-cart-button">X</button></h2>
+                    <ul id="cart-items"></ul>
+                    <p id="total-price">Totalt: 0 kr</p> <button>Betala</button>
+                </div> */}
             </header>
         </>
     )
