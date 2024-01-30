@@ -4,9 +4,8 @@ body{
 }
 
 .footer{
-    position: fixed;
+
     bottom: 0;
-    margin: 100px 0 0 0;
     background-color: #325119;
     padding: 20px 60px 0 60px;
 
