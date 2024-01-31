@@ -30,7 +30,8 @@ const Product = () => {
             <h1>En produktsida</h1>
             <h2>{title}</h2>
         </div>
-    )
+
+)
 }
 
 export default Product

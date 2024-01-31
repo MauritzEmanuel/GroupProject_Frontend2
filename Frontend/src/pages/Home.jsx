@@ -15,7 +15,7 @@ const Home = () => {
         const interval = setInterval(() => {
             setCurrentImageIndex(currentImageIndex => (currentImageIndex + 1) % sliderImages.length);
 
-        }, 5000);
+        }, 8000);
 
         return () => clearInterval(interval);
     }, []);
