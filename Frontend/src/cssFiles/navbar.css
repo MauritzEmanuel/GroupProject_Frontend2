@@ -24,14 +24,14 @@
 .search-nav {
     display: flex;
     justify-content: center;
-    margin-top: auto;
+    margin-top: 1.2em;
     align-items: center;
     width: 100%;
     position: relative;
     
 }
   .search-nav input {
-    height: 2.5em;
+    height: 1.8em;
     width: 27em;
     background-color: #edf3f8;
     border-radius: .4em;
@@ -53,7 +53,7 @@
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    margin-bottom: auto;
+    margin-top: 1em;
     gap: 4rem;
 }
   .ul-nav li {
