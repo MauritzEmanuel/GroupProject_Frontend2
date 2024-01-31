@@ -25,7 +25,8 @@ const Product = () => {
         <div>
             <h1>En produktsida</h1>
         </div>
-    )
+
+)
 }
 
 export default Product
