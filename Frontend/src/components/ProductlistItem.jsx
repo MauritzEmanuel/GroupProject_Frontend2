@@ -1,14 +1,15 @@
 import React  from "react";
 
-const ProductListItem = ({ product }) => {
+const ProductListItem = ({productData}) => {
+
+    console.log(productData);
 
     return(
-        <li key={product.id}>
-            <h2>{product.Title}</h2>
-            <h3>{product.Author}</h3>
-            <p>{product.Image}</p>
-            <p>{product.Description}</p>
-            <p>Pris: {product.price} KR</p>
+        <li key={productData.id}>
+            <h2>{productData.title}</h2>
+            <h3>{productData.author}</h3>
+            <p>{productData.image}</p>
+            <p>Pris: {productData.price} KR</p>
         </li>
     )
 }
