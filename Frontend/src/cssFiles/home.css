@@ -2,10 +2,11 @@
   height: 40vh;
   width: 100%;  
   display: flex;
+  justify-content: center;
 
   .container{
     display: flex;
-    width: 100%;
+    width: 70%;
     height: 100%;
   }
 
