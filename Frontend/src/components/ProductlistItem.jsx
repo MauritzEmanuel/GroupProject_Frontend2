@@ -6,7 +6,7 @@ const ProductListItem = ({ product }) => {
         <h3>{product.Auther}</h3>
         <p>{product.Image}</p>
         <p>{product.Description}</p>
-        <p>Pris: {product.price} KR</p>
+        <p>Pris: {product.Price} KR</p>
     </li>
 }
 
