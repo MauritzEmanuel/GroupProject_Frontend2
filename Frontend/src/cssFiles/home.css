@@ -1,4 +1,10 @@
+body{
+  background-color: whitesmoke;
+}
+
 .slider{
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: 40vh;
   width: 100%;  
   display: flex;
@@ -17,11 +23,11 @@
 }
 
 .about-us {
+  background-color: whitesmoke;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 45px;
-  background-color: white;
 }
 
 .about-us-content {
