@@ -1,1 +1,33 @@
+<<<<<<< HEAD
 ../Frontend/src/cssFiles/contact.css
+=======
+.contact-h1 {
+    text-align: center;
+}
+
+.contact-div {
+    list-style: none;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5em;
+
+    .text {
+        border: 0.15em solid #ddd;
+        width: 25em;
+        height: 10em;
+
+        p{
+            text-align: center;
+        }
+    }
+
+    .form {
+        background-color: #325119;
+        color: white;
+        width: 30em;
+        height: 10.3em;
+    }
+}
+>>>>>>> ea5cd3be6406c58588794c1860f239648f7ff621

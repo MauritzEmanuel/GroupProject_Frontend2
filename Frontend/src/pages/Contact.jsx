@@ -1,37 +1,48 @@
 import React from 'react';
 import '../cssFiles/contact.css';
 
+
 const Contact = () => {
-  return (
-    <div className='Box'>
-      <div className='form-group'>
-        <input type='text' id='firstName' name='firstName' placeholder=' ' />
-        <label htmlFor='firstName'>First Name:</label>
-      </div>
+  
+    return (
+    <> 
+      <div>
+        <h1 className='contact-h1'>Kontakta oss</h1>
+        <div className='contact-div'>
+            <div className='text'>
+                <p>
+                    KONTAKTA OSS <br/>
+                    Tack för att du besöker Time Travelers! <br/>
+                    För förfrågningar och frågor, fyll i formuläret! <br/>
+                    Vänligen vänta upp till 48 arbetsdagar för att få ett svar. <br/>
+                    Alla beställningar behandlas inom 3-5 arbetsdagar EXKLUSIVE helger och helgdagar.
+                </p>
+            </div>
 
-      <div className='form-group'>
-        <input type='text' id='lastName' name='lastName' placeholder=' ' />
-        <label htmlFor='lastName'>Last Name:</label>
-      </div>
+            <div className='form'>
+                <form>
+                    <label htmlFor="firstName">Förnamn:</label>
+                    <input type="text" id="firstName" name="firstName" required />
 
-      <div className='form-group'>
-        <input type='email' id='email' name='email' placeholder=' ' />
-        <label htmlFor='email'>Email:</label>
-      </div>
+                    <label htmlFor="lastName">Efternamn:</label>
+                    <input type="text" id="lastName" name="lastName" required />
 
-      <div className='form-group'>
-        <input type='tel' id='phone' name='phone' placeholder=' ' />
-        <label htmlFor='phone'>Phone Number:</label>
-      </div>
+                    <label htmlFor="email">E-post:</label>
+                    <input type="email" id="email" name="email" required />
 
-      <div className='form-group'>
-        <textarea id='message' name='message' rows='4' placeholder=' '></textarea>
-        <label htmlFor='message'>Message:</label>
-      </div>
+                    <label htmlFor="phoneNumber">Telfon-nr:</label>
+                    <input type="email" id="email" name="email" required /> 
 
-      <button type='submit'>Submit</button>
-    </div>
-  );
-};
+                    <label htmlFor="message">Meddelande:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Skicka</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </>  
+    )
+}
 
 export default Contact;
