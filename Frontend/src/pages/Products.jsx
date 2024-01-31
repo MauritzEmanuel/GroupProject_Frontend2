@@ -3,16 +3,20 @@
 // import ProductListItems from '../components/ProductlistItem'
 
 import { useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios"
-// import ProductListItems from '../components/ProductlistItem'
 
 
 const Product = () => {
+    const {id} = useParams()
+    const [title, setTitle] = useState('')
 
     const getData = async () => {
-        const data = await axios.get(`http://localhost:1337/api/products/`)
-        console.log(data);
+
+        const data = await axios.get(`http://localhost:1337/api/products/${id}`)
+
+        console.log(data.data.data.attributes.Title);
+        setTitle(data.data.data.attributes.Title)
     }
 
     
@@ -24,8 +28,10 @@ const Product = () => {
         
         <div>
             <h1>En produktsida</h1>
+            <h2>{title}</h2>
         </div>
-    )
+
+)
 }
 
 export default Product
