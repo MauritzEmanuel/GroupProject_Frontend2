@@ -1,0 +1,50 @@
+.prod-h1 {
+    text-align: center;
+}
+
+.prod-ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+    li {
+        position: relative; /* Lägg till detta för att .overlay ska vara relativ till kortet */
+        border: 0.15em solid #ddd;
+        margin: 2%;
+        width: 15em;
+        height: auto;
+        background-color: white;
+        border-radius: 20px;
+
+        img {
+            width: 10em;
+            height: auto;
+            margin-left: 2.5em;
+            margin-top: 1em;
+            border-radius: 10px;
+        }
+            
+        .p1 {
+            text-align: center;
+            margin-left: .5em;
+            margin-right: .5em;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .p2 {
+            font-size: 14px;
+            text-align: center;
+        }
+        .p3 {
+            text-align: end;
+            font-size: 15px;
+            font-weight: bold;
+            margin-right: .5em;
+        }
+    }
+
+    
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios"
 import ProductListItem from "../components/ProductlistItem";
+import "../cssFiles/products.css"
 
 
 const Product = () => {
@@ -11,11 +12,11 @@ const Product = () => {
 
         const data = await axios.get(`http://localhost:1337/api/products?populate=*`)
         
-        const tempArr = []
+        const productArr = []
 
         data.data.data.forEach(item => {
 
-            tempArr.push({
+            productArr.push({
                 id: item.id,
                 title: item.attributes.Title,
                 author: item.attributes.Author,
@@ -24,7 +25,7 @@ const Product = () => {
             })
         })
 
-        setProducts(tempArr)
+        setProducts(productArr)
     }
 
     
@@ -35,8 +36,8 @@ const Product = () => {
     return (
         
         <div>
-            <h1>En produktsida</h1>
-            <ul>
+            <h1 className="prod-h1">Time Travelers historieböcker</h1>
+            <ul className="prod-ul">
                 {
                     products.map(product => <ProductListItem
                         key={product.id}
