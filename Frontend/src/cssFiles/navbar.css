@@ -29,10 +29,9 @@
     align-items: center;
     width: 100%;
     position: relative;
-    
 }
   .search-nav input {
-    height: 1.8em;
+    height: 2.5em;
     width: 27em;
     background-color: #edf3f8;
     border-radius: .4em;
