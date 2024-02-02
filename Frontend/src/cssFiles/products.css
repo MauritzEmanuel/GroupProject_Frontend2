@@ -1,5 +1,13 @@
-.prod-h1 {
-    text-align: center;
+.Prod-Header {
+    background-image: url('../assets/Images/History/historia.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 1em;
+    height: 9em;
 }
 
 .prod-ul {
@@ -11,7 +19,6 @@
     margin: 0;
 }
 
-/*
 .HelaSkiten{
     display: flex;
     flex-direction: column;
@@ -19,10 +26,9 @@
     position: relative;
     margin: 2%;
     width: 16em;
-    height: auto;
+    height: 30em;
     align-items: center;
 }
- */
 
 
 .prod-ul li {
@@ -32,10 +38,9 @@
     position: relative;
     border: 0.15em solid #ddd;
     width: 15em;
-    height: auto;
+    height: 27.1em;
     background-color: white;
     border-radius: 20px;
-    margin: 2%;
 }
 
 .SuperBox img {
@@ -74,6 +79,36 @@
     margin-right: .5em;
 }
 
-.SuperBox{
+.Knapparna{
+    margin-top: 7px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Knapparna .InfoButton{
+    color: black;
+    border-radius: 30px;
+    background-color: dodgerblue;
+    width: 7em;
+    height: 3em;
+}
+
+.Knapparna .AddToCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: limegreen;
+    border-radius: 30px;
+    width: 3em;
+    height: 3em;
+
+    padding: 0;
 
 }
+
+.AddToCart svg{
+    width: 31px;
+    height: 31px;
+}
+
