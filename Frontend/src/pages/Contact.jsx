@@ -6,12 +6,11 @@ const Contact = () => {
   
     return (
     <> 
-      <div>
+      <div className='contact-page'>
         <h1 className='contact-h1'>Kontakta oss</h1>
         <div className='contact-div'>
             <div className='text'>
                 <p>
-                    KONTAKTA OSS <br/>
                     Tack för att du besöker Time Travelers! <br/>
                     För förfrågningar och frågor, fyll i formuläret! <br/>
                     Vänligen vänta upp till 48 arbetsdagar för att få ett svar. <br/>
@@ -31,7 +30,7 @@ const Contact = () => {
                     <input type="email" id="email" name="email" required />
 
                     <label htmlFor="phoneNumber">Telefon-nr:</label>
-                    <input type="email" id="email" name="email" required /> 
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required /> 
 
                     <label htmlFor="message">Meddelande:</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
