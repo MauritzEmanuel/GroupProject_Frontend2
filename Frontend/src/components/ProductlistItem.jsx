@@ -4,12 +4,25 @@ import "../cssFiles/products.css"
 const ProductListItem = ({productData}) => {
 
     return(
-        <li key={productData.id}>
-            <img src={`http://localhost:1337${productData.image}`} alt={`Cover for ${productData.title}`} />
-            <p className="p1">{productData.title}</p>
-            <p className="p2">{productData.author}</p>
-            <p className="p3">Pris: {productData.price}:- kr</p>
-        </li>
+        /*<div className='HelaSkiten'>
+            <div>*/
+                <li key={productData.id}>
+                    <div className='SuperBox'>
+                        <img src={`http://localhost:1337${productData.image}`} alt={`Cover for ${productData.title}`} />
+                        <p className="Title">{productData.title}</p>
+                        <p className="Author">{productData.author}</p>
+                    </div>
+                    <div className='Box'>
+                        <p className="Price">Pris: {productData.price}:-</p>
+                    </div>
+                </li>
+            /*</div>
+            <div className='Knapparna'>
+                <button>Shop</button>
+                <button>Läs mer</button>
+            </div>
+        </div>*/
+
     )
 }
 
