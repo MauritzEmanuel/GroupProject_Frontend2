@@ -72,6 +72,35 @@
 }
 
 .Knapparna{
-    height: auto;
+    margin-top: 7px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Knapparna .InfoButton{
+    color: black;
+    border-radius: 30px;
+    background-color: dodgerblue;
+    width: 7em;
+    height: 3em;
+}
+
+.Knapparna .AddToCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: limegreen;
+    border-radius: 30px;
+    width: 3em;
+    height: 3em;
+
+    padding: 0;
+
+}
+
+.AddToCart svg{
+    width: 31px;
+    height: 31px;
 }
 
