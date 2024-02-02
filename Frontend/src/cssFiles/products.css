@@ -11,7 +11,6 @@
     margin: 0;
 }
 
-/*
 .HelaSkiten{
     display: flex;
     flex-direction: column;
@@ -19,10 +18,9 @@
     position: relative;
     margin: 2%;
     width: 16em;
-    height: auto;
+    height: 30em;
     align-items: center;
 }
- */
 
 
 .prod-ul li {
@@ -32,10 +30,9 @@
     position: relative;
     border: 0.15em solid #ddd;
     width: 15em;
-    height: auto;
+    height: 27.1em;
     background-color: white;
     border-radius: 20px;
-    margin: 2%;
 }
 
 .SuperBox img {
@@ -74,6 +71,7 @@
     margin-right: .5em;
 }
 
-.SuperBox{
-
+.Knapparna{
+    height: auto;
 }
+

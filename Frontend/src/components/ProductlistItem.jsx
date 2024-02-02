@@ -4,8 +4,8 @@ import "../cssFiles/products.css"
 const ProductListItem = ({productData}) => {
 
     return(
-        /*<div className='HelaSkiten'>
-            <div>*/
+        <div className='HelaSkiten'>
+            <div className="Produkterna">
                 <li key={productData.id}>
                     <div className='SuperBox'>
                         <img src={`http://localhost:1337${productData.image}`} alt={`Cover for ${productData.title}`} />
@@ -16,12 +16,12 @@ const ProductListItem = ({productData}) => {
                         <p className="Price">Pris: {productData.price}:-</p>
                     </div>
                 </li>
-            /*</div>
+            </div>
             <div className='Knapparna'>
                 <button>Shop</button>
                 <button>Läs mer</button>
             </div>
-        </div>*/
+        </div>
 
     )
 }
