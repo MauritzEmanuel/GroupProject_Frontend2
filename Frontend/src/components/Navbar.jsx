@@ -1,5 +1,6 @@
 import React from 'react';
 import '../cssFiles/navbar.css'
+import Kart from './Kart';
 import Logo from '../assets/Images/Logo/Logo-time-travelers.png'
 
 const Navbar = () => {
@@ -45,7 +46,7 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <div className='InvisibleBox'>
+                    <div className='InvisibleBox' onClick={() => console.log('Open cart')}>
                         <div className='Circle'>
                             <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" className="bi bi-cart4" stroke="#000000" stroke-width="0.00016">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -58,7 +59,10 @@ const Navbar = () => {
                     </div>
                 </nav>
 
-                {/* <div id="shopping-cart-div" class="wrapper">
+                {<div className="navbar">
+      {/* Cart icon in the navbar */}
+      <Kart />
+    </div>/* <div id="shopping-cart-div" class="wrapper">
                     <h2>Varukorg<button id="exit-cart-button">X</button></h2>
                     <ul id="cart-items"></ul>
                     <p id="total-price">Totalt: 0 kr</p> <button>Betala</button>

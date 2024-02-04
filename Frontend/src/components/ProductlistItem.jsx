@@ -18,7 +18,7 @@ const ProductListItem = ({productData}) => {
                 </li>
             </div>
             <div className='Knapparna'>
-                <button className='InfoButton' onClick={}>Mer info</button>
+                <button className='InfoButton'>Mer info</button>
                 <button className='AddToCart'>
                     <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" className="bi bi-cart4" stroke="#000000" stroke-width="0.00016">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
