@@ -5,10 +5,6 @@ import Logo from '../assets/Images/Logo/Logo-time-travelers.png'
 
 const Navbar = () => {
 
-    const navStyles = {
-        
-    }
-
     return (
         <>
             <header>
