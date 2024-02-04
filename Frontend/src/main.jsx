@@ -7,7 +7,8 @@ import AboutUs from './pages/AboutUs.jsx'
 import Product from './pages/Products.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
-import Categories from './pages/Categories.jsx'
+
+
 
 const router = createBrowserRouter([
   {
