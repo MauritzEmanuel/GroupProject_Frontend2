@@ -1,7 +1,12 @@
-import React, { useState } from "react";
-import Kart from "../cssFiles/kart.css"
 
+import React from 'react';
+import '../cssFiles/kart.css';
 
+const Kart = () => {
+  return (
+    <div>
+    </div>
+  );
+};
 
-
-  export default Kart;
+export default Kart;
