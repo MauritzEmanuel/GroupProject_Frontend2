@@ -30,6 +30,20 @@ const Home = () => {
         </div>
     </section>
 
+    <section className='eras'>
+        <div className='1700s'>
+        <h2>1700-talet</h2>
+        <p>Dyk ned i 1700-talets upplysningstid, där vetenskapliga upptäckter och filosofiska idéer formade världen. Utforska verk från denna spännande era och låt historiens vingslag föra dig till en tid av revolution och förnyelse. Tryck på knappen för att se alla böcker. </p>
+        </div>
+
+        <div className='1800s'>
+
+        </div>
+        <div className='1900s'>
+
+        </div>
+    </section>
+
     <section className='about-us'>
         <div className='about-us-content'>
             <div className='logo-container'>
