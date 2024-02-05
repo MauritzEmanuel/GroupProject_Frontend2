@@ -36,7 +36,7 @@ const Product = () => {
     return (
         
         <div>
-            <h1 className="prod-h1">Time Travelers historieböcker</h1>
+            <h1 className="Prod-Header">Time Travelers historieböcker</h1>
 
             <ul className="prod-ul">
                 {

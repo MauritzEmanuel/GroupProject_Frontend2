@@ -1,27 +1,27 @@
-body{
+body {
   background-color: whitesmoke;
 }
 
-.slider{
+.Home .slider{
   margin-top: 20px;
-  height: 40vh;
+  height: 50vh;
   width: 100%;  
   display: flex;
   justify-content: center;
+}
 
-  .container{
+.Home .slider .container{
     display: flex;
     width: 70%;
     height: 100%;
   }
 
-  img{
+.Home .slider .container img{
     flex:auto;
     height: 100%;
   }
-}
 
-.about-us {
+.Home .about-us {
   background-color: whitesmoke;
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@ body{
   padding: 45px;
 }
 
-.about-us-content {
+.Home .about-us .about-us-content {
   display: grid;
   grid-template-columns: 1fr 2fr; 
   column-gap: 50px; 
@@ -39,25 +39,25 @@ body{
   margin: 0 auto;
 }
 
-.logo-container img {
+.Home .about-us .about-us-content .logo-container img {
   width: 100%;
   max-width: 300px;
 }
 
-.about-us-text h1 {
+.Home .about-us .about-us-content .about-us-text h1 {
   color: black; 
   margin-bottom: 20px;
   font-size: 40px;
   text-align: center;
 }
 
-.about-us-text p {
+.Home .about-us .about-us-content .about-us-text p {
   color: black; 
   margin-bottom: 20px;
   text-align: center;
 }
 
-.read-more-btn {
+.Home .about-us .about-us-content .read-more-btn {
   background-color:#b7c3ae; 
   color: black;
   padding: 10px 20px;
@@ -73,23 +73,22 @@ body{
   width: fit-content;
 }
 
-.read-more-btn:hover {
+.Home .about-us .about-us-content .read-more-btn:hover {
   background-color: #325119; 
 }
 
-.logo-container {
+.Home .about-us .about-us-content .logo-container {
     justify-content: center;
     display: flex;
   }
 
 
-
-.subscribe-section {
+.Home .subscribe-section {
   background-color: #b7c3ae;
   padding: 40px 0;
   }
   
-  .subscribe-content {
+.Home .subscribe-section .subscribe-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,54 +97,60 @@ body{
     padding: 0 20px;
   }
 
-  .left, .right {
+.Home .subscribe-section .subscribe-content .left, .right {
     margin: 0 10px;
   }
   
-  .left {
+.Home .subscribe-section .subscribe-content .left {
     color: #325119;
     text-align: left;
   }
 
-  .left h1 {
+.Home .subscribe-section .subscribe-content .left h1 {
     font-size: 30px;
     margin: 0;
     padding-right: 20px;
     }
 
-  .left h3{
+.Home .subscribe-section .subscribe-content .left h3{
     margin: 0;
     padding-right: 20px;
     font-weight: lighter;
     }
   
-  .right {
+.Home .subscribe-section .subscribe-content .right {
     flex: 2;
     display: flex;
     justify-content: center;
   }  
   
-  form {
+.Home .subscribe-section .subscribe-content .right form {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin: 0;
   }
-      
-  input{
-    padding: 10px;
-    border: 1px solid black;
+
+.Home .subscribe-section .subscribe-content .right input,
+.Home .subscribe-section .subscribe-content .right button {
+  padding: 10px;
+  margin: 0;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.Home .subscribe-section .subscribe-content .right input {
     border-radius: 20px 0 0 20px;
-    width: 70%;
+    width: calc(70% - 1px);
   }
   
-  button {
-    padding: 10px 20px;
+.Home .subscribe-section .subscribe-content .right button {
     background-color: #325119;
     color: white;
-    border: 1px solid black;
     border-radius: 0 20px 20px 0;
     cursor: pointer;
+    border-left: none;
   }
 
   
