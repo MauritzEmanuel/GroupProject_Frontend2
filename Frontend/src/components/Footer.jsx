@@ -10,9 +10,9 @@ const Footer = () => {
             <div className='top'>
             <div className='item'>
                 <h1>Information</h1>
-                <span>Delivery</span>
-                <span>Terms of Purchase</span>
-                <span>Exchanges & Returns</span>
+                <span>Leverans</span>
+                <span>Köpvillkor</span>
+                <span>Byten & Returer</span>
                 <span>Cookies</span>
             </div>
             <div className='item'>

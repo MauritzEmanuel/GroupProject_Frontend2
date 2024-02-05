@@ -3,8 +3,7 @@ body {
 }
 
 .Home .slider{
-  margin-top: 20px;
-  height: 50vh;
+  height: 60vh;
   width: 100%;  
   display: flex;
   justify-content: center;
@@ -12,7 +11,7 @@ body {
 
 .Home .slider .container{
     display: flex;
-    width: 70%;
+    width: 80%;
     height: 100%;
   }
 
@@ -20,6 +19,7 @@ body {
     flex:auto;
     height: 100%;
   }
+
 
 .Home .about-us {
   background-color: whitesmoke;
