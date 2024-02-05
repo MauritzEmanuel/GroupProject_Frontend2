@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs.jsx'
 import Product from './pages/Products.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
+import CheckOut from './pages/CheckOut.jsx'
 
 
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: '/products/:id',
     element: <Product/>
+  },
+  {
+    path: '/checkOut',
+    element: <CheckOut/>
   }
 ])
 

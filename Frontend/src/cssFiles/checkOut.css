@@ -1,0 +1,35 @@
+.checkOut-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    justify-content: space-evenly;
+    
+
+    .header-img {
+        max-width: 180px;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .header-a {
+        text-decoration: none;
+        color: #325119;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+
+.checkOut-kart {
+
+
+    .kart-h1 {
+        text-align: center;
+    }
+
+    .kart-div {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 18px;
+    }
+}

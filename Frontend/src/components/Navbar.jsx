@@ -58,9 +58,6 @@ const Navbar = () => {
                 <a href={`/products/:id`}>Produkter</a>
               </li>
               <li>
-                <a href={`/categories`}>Kategorier</a>
-              </li>
-              <li>
                 <a href={`/aboutUs`}>Om Oss</a>
               </li>
               <li>
