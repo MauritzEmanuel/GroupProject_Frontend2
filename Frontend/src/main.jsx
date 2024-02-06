@@ -8,7 +8,8 @@ import Product from './pages/Products.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import CheckOut from './pages/CheckOut.jsx'
-
+import Information from './pages/Information.jsx'
+import BestSelling from './pages/BestSelling.jsx'
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: '/checkOut',
     element: <CheckOut/>
+  },
+  {
+    path: '/information',
+    element: <Information/>
+  },
+  {
+    path: '/bestSelling',
+    element: <BestSelling/>
   }
 ])
 
