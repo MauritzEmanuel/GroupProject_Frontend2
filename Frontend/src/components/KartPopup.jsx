@@ -4,7 +4,7 @@ import '../cssFiles/kart.css';
 const KartPopup = ({ isKartPopupVisible, onClose }) => {
   const handleCheckout = () => {
     // Redirect to the checkout page
-    window.location.href = '/CheckOut.jsx'; // Replace '/CheckOut.jsx' with the actual path to your checkout page
+    window.location.href = '/CheckOut'; // Replace '/CheckOut.jsx' with the actual path to your checkout page
   };
 
   return (
