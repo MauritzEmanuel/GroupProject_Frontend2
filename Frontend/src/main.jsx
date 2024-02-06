@@ -10,7 +10,7 @@ import Footer from './components/Footer.jsx'
 import CheckOut from './pages/CheckOut.jsx'
 import Information from './pages/Information.jsx'
 import BestSelling from './pages/BestSelling.jsx'
-// import Confirmation from './pages/Confirmation.jsx'
+import Confirmation from './pages/Confirmation.jsx'
 
 
 /*const CartArr = [] = useState([]) */
@@ -44,10 +44,10 @@ const router = createBrowserRouter([
     path: '/bestSelling',
     element: <BestSelling/>,
   },
-  // {
-  //   path: '/confirmation',
-  //   element: <Confirmation/>
-  // }
+  {
+    path: '/confirmation',
+    element: <Confirmation/>
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

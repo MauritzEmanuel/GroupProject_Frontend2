@@ -1,40 +1,40 @@
-import React from "react";
-// import { useHistory } from "react-router-dom";
+import React, {useState} from "react";
+import { useNavigate } from 'react-router-dom';
 import '../cssFiles/checkOut.css';
 import Logo from '../assets/Images/Logo/Logo-time-travelers.png'
 
 
 const CheckOut = () => {
 
-    // const history = useHistory(); // Skapa en instans av useHistory
+    const navigate = useNavigate(); // Skapa en instans av useNavigate
 
-    // const [formData, setFormData] = useState({
-    //     firstName: "",
-    //     lastName: "",
-    //     email: "",
-    //     streetName: "",
-    //     streetNr: "",
-    //     zipCode: "",
-    //     county: "",
-    //     cardNr: "",
-    //     ExpDate: "",
-    //     ccvNr: "",
-    // });
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        streetName: "",
+        streetNr: "",
+        zipCode: "",
+        county: "",
+        cardNr: "",
+        ExpDate: "",
+        ccvNr: "",
+    });
 
-    // const handleChange = (e) => {
-    //     setFormData({
-    //     ...formData,
-    //     [e.target.name]: e.target.value,
-    //     });
-    // };
+    const handleChange = (e) => {
+        setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+        });
+    };
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     // Spara formulärdatan i localStorage
-    //     localStorage.setItem("checkoutData", JSON.stringify(formData));
-    //     // Navigera till bekräftelsesidan
-    //     history.push("/confirmation");
-    // };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Spara formulärdatan i localStorage
+        localStorage.setItem("checkoutData", JSON.stringify(formData));
+        // Navigera till bekräftelsesidan
+        navigate.push("/confirmation");
+    };
 
 
 
@@ -132,12 +132,12 @@ const CheckOut = () => {
                         <form className="info-border">
                             <div className="info-divs">
                                 <label htmlFor="cardNr">Kortnummer:</label>
-                                <input type="number" id="cardNr" name="cardNr" value="0000 0000 0000 0000" min="16" required />
+                                <input type="number" id="cardNr" name="cardNr" required />
                             </div>
 
                             <div className="info-divs">
                                 <label htmlFor="ExpDate">Utgångsdatum:</label>
-                                <input type="text" id="ExpDate" name="ExpDate" min="5" required />
+                                <input type="text" id="ExpDate" name="ExpDate" required />
                             </div>
 
                             <div className="info-divs">
@@ -149,14 +149,9 @@ const CheckOut = () => {
                     </div>
 
                     <div className="checkOut-btn">
-                        <input 
-                            className="input" 
-                            type="submit" 
-                            name="skicka" 
-                            id="skicka" 
-                            value="Bekräfta information" 
-                            // onClick={handleSubmit}
-                        />
+                        <button className="button" onClick={handleSubmit}>
+                            Bekräfta information
+                        </button>
                     </div>
                 </div>
             </div>
