@@ -8,6 +8,7 @@ import Product from './pages/Products.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import CheckOut from './pages/CheckOut.jsx'
+import Confirmation from './pages/Confirmation.jsx'
 
 
 
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: '/checkOut',
     element: <CheckOut/>
+  },
+  {
+    path: '/confirmation',
+    element: <Confirmation/>
   }
 ])
 

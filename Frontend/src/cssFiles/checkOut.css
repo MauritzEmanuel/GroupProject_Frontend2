@@ -33,3 +33,128 @@
         font-size: 18px;
     }
 }
+
+.checkOut-lev {
+    
+    .lev-h1 {
+        text-align: center;
+    }
+
+    .lev-border-cont {
+        display: flex;
+        justify-content: center;
+
+        .lev-border {
+            width: 100%;
+            max-width: 450px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: #f3f3f3;
+    
+            .lev-h3 {
+                text-align: center;
+                font-weight: bold;
+            }
+    
+            .lev-cont-line {
+                display: flex;
+                justify-content: center;
+    
+                .lev-line {
+                    width: 100%;
+                    height: 1px;
+                    background-color: black;
+                }
+            }
+    
+            .lev-home {
+                display: flex;
+                justify-content: space-between;
+                font-size: 16px;
+                font-weight: bold;
+                align-items: center;
+            }
+
+            .lev-time {
+                margin-left: .4em;
+            }
+        }
+
+    }
+    
+}
+
+.checkOut-info {
+
+    .info-h1 {
+        text-align: center;
+    }
+
+    .info-border-cont {
+        display: flex;
+        justify-content: center;
+
+        .info-border {
+            width: 100%;
+            max-width: 450px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: #f3f3f3;
+            display: grid;
+            gap: 15px;
+              
+            .info-divs {
+                display: flex;
+                justify-content: center;
+                gap: 1em;
+            }
+
+            .info-divs label {
+                font-weight: bold;
+                font-size: 16px;
+                color: black;
+            }
+              
+            .info-divs input {
+                font-size: 15px;
+                border: 2px solid black;
+                border-radius: 7px;
+            }
+        }
+    }
+
+    .info-cont-line {
+        display: flex;
+        justify-content: center;
+
+        .info-line {
+            width: 100%;
+            height: 1px;
+            background-color: black;
+        }
+    }
+}
+
+.checkOut-btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 5em;
+    
+    .input {
+        padding: .8em;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        color: #325119;
+        cursor: pointer;
+    }
+    .input:hover {
+        background-color: #325119;
+        color: white;
+    }
+}
