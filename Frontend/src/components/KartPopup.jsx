@@ -2,24 +2,21 @@ import React from 'react';
 import '../cssFiles/kart.css';
 
 const KartPopup = ({ isKartPopupVisible, onClose }) => {
+  const handleCheckout = () => {
+    // Redirect to the checkout page
+    window.location.href = '/CheckOut.jsx'; // Replace '/CheckOut.jsx' with the actual path to your checkout page
+  };
+
   return (
-    <div className={isKartPopupVisible ? 'varukorg visible' : 'varukorg'}>
-      <div className='hej'>
-        <div className='betala'>
-          <h1>Varukorg</h1>
-        </div>
-        <button className='Close-button' onClick={onClose}>
-          X
-        </button>
+    <div className={`varukorg ${isKartPopupVisible ? 'visible' : ''}`}>
+      <div className='content'>
+        <h1>Varukorg</h1>
+        <button className='close-button' onClick={onClose}>X</button>
         <hr />
       </div>
-      
-     
-     <button className='Betala' onClick={() => console.log('Button clicked')}>
-        
-        Betala
+      <button className='checkout-button' onClick={handleCheckout}>
+        Check out
       </button>
-    
     </div>
   );
 };
