@@ -112,3 +112,7 @@
     height: 31px;
 }
 
+.InfoButton:hover, .AddToCart:hover{
+    cursor: pointer;
+}
+
