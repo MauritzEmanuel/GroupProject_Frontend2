@@ -14,6 +14,15 @@ body{
     gap: 100px;
 }
 
+.footer .top a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer .top a:hover {
+    text-decoration: underline;
+}
+
 .footer .top .item {
     flex: 1;
     display: flex;

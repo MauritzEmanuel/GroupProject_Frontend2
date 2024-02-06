@@ -5,7 +5,9 @@ import Slider1 from '../assets/Images/Logo/Slider-1.png'
 import Slider2 from '../assets/Images/Logo/Slider-2.png'
 import Slider3 from '../assets/Images/Logo/Slider-3.png'
 import Logo from '../assets/Images/Logo/Logo-small-no-background.png'
-
+import image1700s from '../assets/Images/1700/En-rustning-av-ljus.png'
+import image1800s from '../assets/Images/1800/Napoleons-falttag.png'
+import image1900s from '../assets/Images/1900/Ddr-bortom-muren-osttyskland-1949-90.png'
 
 const Home = () => {
     const sliderImages = [Slider1, Slider2, Slider3];
@@ -24,23 +26,16 @@ const Home = () => {
 
     <div className='Home'>
 
+    <section className='best-seller'>
+        <Link to='/bestSellers' className='highlight-section'>
+            <strong>Upptäck våra bästsäljande böcker </strong> 
+            <span className='underline-text'>och låt dig förföras av litterära mästerverk!</span>
+        </Link>
+    </section>
+
     <section className='slider'>
         <div className='container'>
             <img src={sliderImages[currentImageIndex]} alt="" />
-        </div>
-    </section>
-
-    <section className='eras'>
-        <div className='1700s'>
-        <h2>1700-talet</h2>
-        <p>Dyk ned i 1700-talets upplysningstid, där vetenskapliga upptäckter och filosofiska idéer formade världen. Utforska verk från denna spännande era och låt historiens vingslag föra dig till en tid av revolution och förnyelse. Tryck på knappen för att se alla böcker. </p>
-        </div>
-
-        <div className='1800s'>
-
-        </div>
-        <div className='1900s'>
-
         </div>
     </section>
 
@@ -55,6 +50,44 @@ const Home = () => {
                 <Link to="/aboutUs" className="read-more-btn">Läs mer</Link>
             </div>
         </div>
+    </section>
+
+    <section className='eras'>
+        <div className='content'>
+        <div className='text'>
+            <p>1700 - TALET</p>
+            <strong>Ken Follett speglar 1700-talets turbulenta anda genom en intensiv berättelse som väver samman individuella strävanden och historiska omvälvningar. Romanen framhäver upplysningstidens idéer om rättvisa och mänsklig förmåga, parallellt med den era då politisk och social förändring formade världen. </strong>
+            <span>Klicka på knappen för fler bra titlar om 1700-talet. </span>
+            <Link to='/products' className='explore-button'>Visa alla</Link>
+        </div>
+        <Link to='/products' className='image'> 
+            <img src={image1700s} alt="1700s" />
+        </Link>
+        </div>
+
+        <div className='content'>
+        <div className='text'>
+            <p>1800 - TALET</p>
+            <strong>En ingående analys av Napoleon Bonapartes militära strategier och kampanjer som formade Europa i början av 1800-talet.Olofssons arbete belyser de revolutionerande förändringarna i krigsföring som Napoleon introducerade, vilka fortfarande studeras av militärhistoriker idag. </strong>
+            <span>Klicka på knappen för att bläddra i vår samling. </span>
+            <Link to='/products' className='explore-button'>Visa alla</Link>
+        </div>
+        <Link to='/products' className='image'> 
+            <img src={image1800s} alt="1800s" />
+        </Link>
+        </div> 
+
+        <div className='content'>
+        <div className='text'>
+            <p>1900 - TALET</p>
+            <strong>Katja Hoyer utforskar det dagliga livet och de politiska dynamikerna i Östtyskland, bortom de stereotypa bilderna av Berlinmuren och kalla kriget. Boken avslöjar de komplexa verkligheterna av livet under östtysk övervakning och statlig kontroll, och hur dessa erfarenheter skilde sig från och liknade livet i väst.</strong>
+            <span>Klicka på knappen för att välja fler av våra titlar. </span>
+            <Link to='/products' className='explore-button'>Visa alla</Link>
+        </div>
+            <Link to='/products' className='image'> 
+            <img src={image1900s} alt="1900s" />
+        </Link>
+        </div>            
     </section>
 
     <section className="subscribe-section">
