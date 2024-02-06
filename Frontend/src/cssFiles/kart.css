@@ -1,38 +1,45 @@
 .varukorg {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    transform: translate(0, 0);
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    width: 550px;
-    height: 1000px;
-    background-color: #325119;
-    color: white;
-    font-style: italic;
-  }
-  
-  .varukorg.visible {
-    display: block;
-  }
-  
-  .Close-button {
-      background-color: #325119;
-    position: absolute;
-    top: 25px;
-    right: 10px;
-    font-size: 30px;
-    border: none;
-    padding: 0;
-    box-shadow: none;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translate(0, 0);
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 550px;
+  height: 1000px;
+  background-color: #325119;
+  color: white;
+  font-style: italic;
+}
 
-  }
-  
-  .Betala {
-    position:absolute;
-    margin-top: 500px;
+.varukorg.visible {
+  display: block;
+}
 
-  }
+.close-button {
+  background-color: #325119;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  font-size: 30px;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+.checkout-button {
+  border-radius: 5px;
+  padding: 10px 40px;
+  background-color: #325119;
+  width: 92%;
+  color: white;
+  font-size: 25px;
+  margin: 20px;
+  text-align: center;
+  border: 2px solid white;
+  margin-top: 400px;
+  font-style: italic;
   
+}

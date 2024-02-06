@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ReactDOM from 'react-dom/client'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Home from './pages/Home.jsx'
@@ -11,6 +11,8 @@ import CheckOut from './pages/CheckOut.jsx'
 import Confirmation from './pages/Confirmation.jsx'
 
 
+
+/*const CartArr = [] = useState([]) */
 
 const router = createBrowserRouter([
   {
