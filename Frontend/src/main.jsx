@@ -11,7 +11,7 @@ import CheckOut from './pages/CheckOut.jsx'
 
 
 
-const CartArr = [] = useState([])
+/*const CartArr = [] = useState([]) */
 
 const router = createBrowserRouter([
   {
