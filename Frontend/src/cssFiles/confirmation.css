@@ -1,0 +1,45 @@
+.conf-thank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    gap: 1em;
+    background-color: #b7c3ae;
+    padding: 1em;
+
+    .thank-h1 {
+        width: 33%;
+        text-align: center;
+    }
+    .thank-h2 {
+        width: 33%;
+        text-align: center;
+    }
+    .thank-img {
+        width: 250px;
+    }
+    
+}
+
+.conf-left-right {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    gap: 2em;
+    
+
+    .conf-left {
+        font-size: 18px;
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 50%;
+    }
+
+    .conf-right {
+        font-size: 18px;
+        border: 1px solid black;
+        border-radius: 10px;
+        text-align: center;
+        width: 50%;
+    }
+}
