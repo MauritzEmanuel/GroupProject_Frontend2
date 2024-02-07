@@ -820,7 +820,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     Description: Attribute.Text;
     Image: Attribute.Media;
     Price: Attribute.Decimal;
-    IsNew: Attribute.Boolean;
+    BestSelling: Attribute.Boolean;
     Quantity: Attribute.Integer;
     Brand: Attribute.String;
     Category: Attribute.Relation<

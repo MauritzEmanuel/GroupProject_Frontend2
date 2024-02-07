@@ -32,7 +32,7 @@
     "Price": {
       "type": "decimal"
     },
-    "IsNew": {
+    "BestSelling": {
       "type": "boolean"
     },
     "Quantity": {

@@ -5,7 +5,7 @@ import '../cssFiles/bestSelling.css'
 const BestSelling = () => {
     return (
        <div>
-        
+            
        </div>
     );
 };
