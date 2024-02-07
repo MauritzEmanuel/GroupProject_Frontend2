@@ -1,17 +1,36 @@
 body {
-  background-color: whitesmoke;
+  background-color: white;
+  font-size: 18px;
 }
 
+.Home .highlight-section {
+  display: block;
+  background-color: #b7c3ae;
+  padding: 10px 20px;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+}
+
+.Home .highlight-section strong {
+  font-size: 20px;
+}
+
+.Home .underline-text {
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+
 .Home .slider{
-  height: 60vh;
+  height: 70vh;
   width: 100%;  
-  display: flex;
   justify-content: center;
 }
 
 .Home .slider .container{
     display: flex;
-    width: 80%;
+    width: 100%;
     height: 100%;
   }
 
@@ -20,67 +39,141 @@ body {
     height: 100%;
   }
 
-
-.Home .about-us {
-  background-color: whitesmoke;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 45px;
-}
-
-.Home .about-us .about-us-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr; 
-  column-gap: 50px; 
-  align-items: center;
-  max-width: 1200px; 
-  width: 100%;
-  margin: 0 auto;
-}
-
-.Home .about-us .about-us-content .logo-container img {
-  width: 100%;
-  max-width: 300px;
-}
-
-.Home .about-us .about-us-content .about-us-text h1 {
-  color: black; 
-  margin-bottom: 20px;
-  font-size: 40px;
-  text-align: center;
-}
-
-.Home .about-us .about-us-content .about-us-text p {
-  color: black; 
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.Home .about-us .about-us-content .read-more-btn {
-  background-color:#b7c3ae; 
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  border: 1px solid black;
-  border-radius: 40px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 20px auto;
-  width: fit-content;
-}
-
-.Home .about-us .about-us-content .read-more-btn:hover {
-  background-color: #325119; 
-}
-
-.Home .about-us .about-us-content .logo-container {
-    justify-content: center;
+  .Home .about-us {
+    background-color: white;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px;
   }
+  
+  .Home .about-us .about-us-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    column-gap: 50px; 
+    align-items: center;
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .Home .about-us .about-us-content .logo-container img {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .Home .about-us .about-us-content .about-us-text h1 {
+    color: black; 
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .Home .about-us .about-us-content .about-us-text p {
+    color: black; 
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .Home .about-us .about-us-content .read-more-btn {
+    background-color:#b7c3ae; 
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px auto;
+    width: fit-content;
+  }
+  
+  .Home .about-us .about-us-content .read-more-btn:hover {
+    background-color: #325119; 
+  }
+  
+  .Home .about-us .about-us-content .logo-container {
+      justify-content: center;
+      display: flex;
+    }
+
+.Home .eras {
+  position: relative;
+  padding-top: 50px;
+}
+
+.Home .eras::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px; 
+  border-top: 1px solid #b7c3ae;
+}
+
+.Home .eras .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+    position: relative;
+}
+
+.Home .eras .text {
+  max-width: 23%;
+  margin-right: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle, #b7c3ae 40%, transparent 65%);
+  padding: 20px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.Home .content .text strong {
+  font-weight: bold; 
+
+}
+
+.Home .content .text span {
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.Home .eras .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+}
+
+.Home .eras .image img {
+    width: 100%; 
+    height: 500px;
+    object-fit: cover;
+}
+
+.Home .explore-button {
+    text-decoration: none;
+    color: black;
+    background-color: #b7c3ae; 
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+.Home .explore-button:hover {
+  background-color: #325119;
+  transition: background-color 0.3s ease;
+}
 
 
 .Home .subscribe-section {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../cssFiles/navbar.css';
 import Kart from './KartPopup';
 import KartPopup from './KartPopup'; 
-import Logo from '../assets/Images/Logo/Logo-time-travelers.png';
+import Logo from '../assets/Images/Logo/Logo-time-travelers.png'; 
 
 const Navbar = () => {
   const [isKartPopupVisible, setIsKartPopupVisible] = useState(false);
@@ -19,7 +19,9 @@ const Navbar = () => {
       <header>
         <nav className='navbar flex'>
           <div>
-            <img className='image-nav flex' src={Logo} alt="Logo" />
+          <a href={`/`}>
+            <img className='image-nav flex' src={Logo} alt="Logo"/>
+          </a>
           </div>
 
           <div className='div-su-nav'>
@@ -52,7 +54,7 @@ const Navbar = () => {
             </div>
             <ul className='ul-nav flex'>
               <li>
-                <a href={`/`}>Bästa Säljare</a>
+                <a href={`/bestSelling`}>Bästsäljande</a>
               </li>
               <li>
                 <a href={`/products/:id`}>Produkter</a>
