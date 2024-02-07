@@ -3,6 +3,7 @@ import axios from "axios";
 import ProductListItem from "../components/ProductlistItem";
 import KartPopup from "../components/KartPopup";
 import "../cssFiles/products.css";
+import "../cssFiles/products.css"
 
 const Product = () => {
     const [products, setProducts] = useState([]);
@@ -18,6 +19,7 @@ const Product = () => {
                 author: item.attributes.Author,
                 price: item.attributes.Price,
                 image: item.attributes.Image.data.attributes.url
+
             }));
             setProducts(formattedProducts);
         } catch (error) {
@@ -60,3 +62,4 @@ const Product = () => {
 };
 
 export default Product;
+
