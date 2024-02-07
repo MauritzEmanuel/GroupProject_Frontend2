@@ -17,7 +17,7 @@ const KartPopup = ({ isKartPopupVisible, onClose, cartItems }) => {
                     <div>
                         {cartItems.map((item) => (
                             <div key={item.id}>
-                                <img src={item.image} alt={item.title} />
+                                <img src={`http://localhost:1337${item.image}`} alt={item.title} />
                                 <p>{item.title}</p>
                                 <p>Price: {item.price}</p>
                             </div>

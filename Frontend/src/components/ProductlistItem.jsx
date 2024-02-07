@@ -11,7 +11,7 @@ const ProductListItem = ({ productData, onAddToCart }) => {
             <div className="Produkterna">
                 <li key={productData.id} className="cart-item">
                     <div className='SuperBox'>
-                        <img src={productData.image} alt={`Cover for ${productData.title}`} />
+                        <img src={`http://localhost:1337${productData.image}`} alt={`Cover for ${productData.title}`} />
                         <p className="Title">{productData.title}</p>
                         <p className="Author">{productData.author}</p>
                     </div>

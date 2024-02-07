@@ -3,7 +3,6 @@ import axios from "axios";
 import ProductListItem from "../components/ProductlistItem";
 import KartPopup from "../components/KartPopup";
 import "../cssFiles/products.css";
-import "../cssFiles/products.css"
 
 const Product = () => {
     const [products, setProducts] = useState([]);
@@ -41,7 +40,7 @@ const Product = () => {
     };
 
     return (
-        <div>
+        <div className='sidan'>
             <h1 className="Prod-Header">Time Travelers historieböcker</h1>
             <ul className="prod-ul">
                 {products.map(product => (
