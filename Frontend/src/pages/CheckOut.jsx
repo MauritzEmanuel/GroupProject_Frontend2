@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
+import { useFormContext } from '../contexts/FormContext.jsx';
 import '../cssFiles/checkOut.css';
 import Logo from '../assets/Images/Logo/Logo-time-travelers.png'
 
@@ -8,32 +9,23 @@ const CheckOut = () => {
 
     const navigate = useNavigate(); // Skapa en instans av useNavigate
 
-    const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        streetName: "",
-        streetNr: "",
-        zipCode: "",
-        county: "",
-        cardNr: "",
-        ExpDate: "",
-        ccvNr: "",
-    });
+    const { formData, updateFormData } = useFormContext();
 
     const handleChange = (e) => {
-        setFormData({
-        ...formData,
-        [e.target.name]: e.target.value,
+        const { name, value, type, checked } = e.target;
+        const newValue = type === 'checkbox' ? checked : value;
+        updateFormData({
+            [name]: newValue,
+        });
+        updateFormData({
+            [e.target.name]: e.target.value,
         });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Spara formulärdatan i localStorage
         localStorage.setItem("checkoutData", JSON.stringify(formData));
-        // Navigera till bekräftelsesidan
-        navigate.push("/confirmation");
+        navigate("/confirmation");
     };
 
 
@@ -65,8 +57,15 @@ const CheckOut = () => {
                                 <div className="lev-line"></div>
                             </div>
                             <div className="lev-home">
-                                <form action="" >
-                                    <input type="radio" name="homeLev" id="homeLev" value="homeLev"/>
+                                <form>
+                                    <input 
+                                        type="radio" 
+                                        name="homeLev" 
+                                        id="homeLev" 
+                                        value={formData.homeLev}
+                                        onChange={handleChange}
+                                        required
+                                    />
                                     <label for="homeLev">Hemleverans</label>
                                 </form>
                                 <p>49 kr</p>
@@ -85,17 +84,39 @@ const CheckOut = () => {
                         <form className="info-border">
                             <div className="info-divs">
                                 <label htmlFor="firstName">Förnamn: </label>
-                                <input type="text" id="firstName" name="firstName" required />
+                                <input 
+                                    type="text" 
+                                    id="firstName" 
+                                    name="firstName" 
+                                    value={formData.firstName} 
+                                    onChange={handleChange}
+                                    required 
+                                />
                             </div>
 
                             <div className="info-divs">
                                 <label htmlFor="lastName">Efternamn: </label>
-                                <input type="text" id="lastName" name="lastName" required />
+                                <input 
+                                    type="text" 
+                                    id="lastName" 
+                                    name="lastName" 
+                                    value={formData.lastName}
+                                    onChange={handleChange}
+                                    required 
+                                />
                             </div>
                             
                             <div className="info-divs">
                                 <label htmlFor="email">E-post: </label>
-                                <input type="email" id="email" name="email" required />
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" 
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required 
+                                />
                             </div>
 
                             <div className="info-cont-line">
@@ -104,22 +125,51 @@ const CheckOut = () => {
 
                             <div className="info-divs">
                                 <label htmlFor="streetName">Gatunamn: </label>
-                                <input type="text" id="streetName" name="streetName" required />
+                                <input 
+                                    type="text" 
+                                    id="streetName" 
+                                    name="streetName" 
+                                    value={formData.streetName}
+                                    onChange={handleChange}
+                                    required 
+                                    />
                             </div>
                             
                             <div className="info-divs">
                                 <label htmlFor="streetNr">Gatunummer: </label>
-                                <input type="number" id="streetNr" name="streetNr" required />
+                                <input 
+                                    type="number" 
+                                    id="streetNr" 
+                                    name="streetNr" 
+                                    value={formData.streetNr}
+                                    onChange={handleChange}
+                                    required 
+                                />
                             </div>
                             
                             <div className="info-divs">
                                 <label htmlFor="zipCode">Postnummer: </label>
-                                <input type="number" id="zipCode" name="zipCode" required />
+                                <input 
+                                    type="number" 
+                                    id="zipCode" 
+                                    name="zipCode" 
+                                    pattern="[0-9]{5,}" 
+                                    value={formData.zipCode}
+                                    onChange={handleChange}
+                                    required 
+                                />
                             </div>
                              
                             <div className="info-divs">
                                 <label htmlFor="county">Ort: </label>
-                                <input type="text" id="county" name="county" required />
+                                <input 
+                                    type="text" 
+                                    id="county" 
+                                    name="county" 
+                                    value={formData.county}
+                                    onChange={handleChange}
+                                    required
+                                />
                             </div>
                             
                         </form>
@@ -131,18 +181,54 @@ const CheckOut = () => {
                     <div className="info-border-cont">
                         <form className="info-border">
                             <div className="info-divs">
+                                <label htmlFor="cardName">Kortinnehavarens namn:</label>
+                                <input 
+                                    type="text" 
+                                    id="cardName" 
+                                    name="cardName" 
+                                    value={formData.cardName}
+                                    onChange={handleChange}
+                                    required 
+                                />
+                            </div>
+
+                            <div className="info-divs">
                                 <label htmlFor="cardNr">Kortnummer:</label>
-                                <input type="number" id="cardNr" name="cardNr" required />
+                                <input 
+                                    type="number" 
+                                    id="cardNr" 
+                                    name="cardNr" 
+                                    pattern="[0-9]{16,}" 
+                                    value={formData.cardNr}
+                                    onChange={handleChange}
+                                    required 
+                                />
                             </div>
 
                             <div className="info-divs">
                                 <label htmlFor="ExpDate">Utgångsdatum:</label>
-                                <input type="text" id="ExpDate" name="ExpDate" required />
+                                <input 
+                                    type="text" 
+                                    id="ExpDate" 
+                                    name="ExpDate" 
+                                    pattern="\d{2}/\d{2}" 
+                                    value={formData.ExpDate}
+                                    onChange={handleChange}
+                                    required 
+                                />
                             </div>
 
                             <div className="info-divs">
-                                <label htmlFor="ccvNr">CCV nummer:</label>
-                                <input type="number" id="ccvNr" name="ccvNr" required />
+                                <label htmlFor="cvvNr">CVV nummer:</label>
+                                <input 
+                                    type="number" 
+                                    id="cvvNr" 
+                                    name="cvvNr" 
+                                    pattern="[0-9]{3,}" 
+                                    value={formData.cvvNr}
+                                    onChange={handleChange}
+                                    required 
+                                />
                             </div>
 
                         </form>
