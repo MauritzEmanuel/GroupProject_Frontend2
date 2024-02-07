@@ -1,9 +1,22 @@
-/* Add these styles to your existing CSS file */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.about-us-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px;
+    right: 30px;
+    border-top: 1px solid #b7c3ae;
+}
 
 .about-us-container {
     margin: 0 auto;
     padding: 40px;
     text-align: center;
+    position: relative;
 }
 
 .about-us-container h1 {
@@ -23,14 +36,14 @@
 
 .about-us-container .horizontal-section {
     display: flex;
-    justify-content: space-around; /* Adjust as needed */
+    justify-content: space-around; 
     flex-wrap: wrap;
 }
 
 .about-us-container .horizontal-content {
     max-width: 300px;
     text-align: left;
-    margin: 10px; /* Adjust the margin as needed */
+    margin: 10px; 
 }
 
 .about-us-container h2,
@@ -42,28 +55,73 @@
 .about-us-container .paragraftvå,
 .about-us-container .paragrafsex {
     display: block;
-    margin: 20px auto; /* Add some margin for spacing */
+    margin: 20px auto; 
     max-width: 600px;
     font-size: 18px;
     line-height: 1.5;
-    text-align: left; /* Align paragraphs to the left */
+    text-align: left; 
 }
 
 .about-us-container .paragraftre,
 .about-us-container .paragraffyra {
     display: block;
-    margin: 20px auto; /* Move paragraphs 3 and 4 down */
+    margin: 20px auto; 
     max-width: 600px;
     font-size: 18px;
     line-height: 1.5;
-    text-align: left; /* Align paragraphs to the left */
+    text-align: left; 
 }
 
 .about-us-container .paragraffem {
     display: block;
-    margin: 20px auto; /* Add some margin for spacing */
+    margin: 20px auto; 
     max-width: 600px;
     font-size: 18px;
     line-height: 1.5;
-    text-align: left; /* Align paragraph 5 to the left */
+    text-align: left; 
+    padding-bottom: 30px;
+    text-align: center;
 }
+
+.about-us-container .paragraffem p{
+    text-align: center;
+}
+
+
+.about-us-container .brand {
+    background-color: #b7c3ae;
+    padding: 40px 0;
+    margin: 0 auto;
+    width: 100vw;
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+}
+
+.about-us-container .brand-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-us-container .brand-content strong {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.about-us-container .brand-content h2 {
+    font-size: 1.5em;
+    font-style: italic; 
+    margin: 0; 
+}
+
+
+

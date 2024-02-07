@@ -1,138 +1,64 @@
 import { useState, useEffect } from "react";
-import axios from "axios"
+import axios from "axios";
 import ProductListItem from "../components/ProductlistItem";
-import "../cssFiles/products.css"
-
-/*
-const Product = () => {
-
-    const [products, setProducts] = useState([])
-
-    const getData = async () => {
-
-        const data = await axios.get(`http://localhost:1337/api/products?populate=*`)
-
-        const productArr = []
-
-        data.data.data.forEach(item => {
-
-            productArr.push({
-                id: item.id,
-                title: item.attributes.Title,
-                author: item.attributes.Author,
-                price: item.attributes.Price,
-                image: item.attributes.Image.data.attributes.url
-            })
-        })
-
-        setProducts(productArr)
-    }
-
-
-    useEffect(() => {
-        getData()
-    }, [])
-
-    return (
-
-        <div className='sidan'>
-            <div className="Prod-Header">
-                <h1>Time Travelers historieböcker</h1>
-                <div className='knappar'>
-                    <button>1700-talet</button>
-                    <button>1800-talet</button>
-                    <button>1900-talet</button>
-                </div>
-            </div>
-
-            <ul className="prod-ul">
-                {
-                    products.map(product => <ProductListItem
-                        key={product.id}
-                        productData={product}
-                    />)
-                }
-            </ul>
-        </div>
-
-    )
-}
-
-export default Product
-
- */
+import KartPopup from "../components/KartPopup";
+import "../cssFiles/products.css";
 
 const Product = () => {
     const [products, setProducts] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [cartItems, setCartItems] = useState([]);
+    const [isKartPopupVisible, setIsKartPopupVisible] = useState(false);
 
     const getData = async () => {
         try {
-            const data = await axios.get("http://localhost:1337/api/products?populate=*");
-            const productArr = data.data.data.map(item => ({
+            const response = await axios.get("http://localhost:1337/api/products?populate=*");
+            const formattedProducts = response.data.data.map(item => ({
                 id: item.id,
                 title: item.attributes.Title,
                 author: item.attributes.Author,
                 price: item.attributes.Price,
                 image: item.attributes.Image.data.attributes.url
+
             }));
-            setProducts(productArr);
+            setProducts(formattedProducts);
         } catch (error) {
-            console.error("Error fetching products:", error);
+            console.error("Error fetching product data:", error);
         }
-    }
+    };
 
     useEffect(() => {
         getData();
     }, []);
 
-    const filterProductsByCategory = async (category) => {
-        try {
-            const data = await axios.get(`http://localhost:1337/api/categories?populate=*&TimeCenturyInHistory=${category}`);
-            const productArr = data.data.data.map(item => ({
-                id: item.id,
-                title: item.attributes.Title,
-                author: item.attributes.Author,
-                price: item.attributes.Price,
-                image: item.attributes.Image.data.attributes.url
-            }));
-            setProducts(productArr);
-        } catch (error) {
-            console.error(`Error fetching products for category ${category}:`, error);
-        }
-    }
+    const addToCart = (product) => {
+        setCartItems(prevItems => [...prevItems, product]);
+        setIsKartPopupVisible(true);
+    };
 
-    const handleCategoryButtonClick = async (category) => {
-        if (category === selectedCategory) {
-            getData();
-            setSelectedCategory(null);
-        } else {
-            filterProductsByCategory(category);
-            setSelectedCategory(category);
-        }
-    }
+    const closeKartPopup = () => {
+        setIsKartPopupVisible(false);
+    };
 
     return (
         <div className='sidan'>
-            <div className="Prod-Header">
-                <h1>Time Travelers historieböcker</h1>
-                <div className='knappar'>
-                    <button onClick={() => handleCategoryButtonClick("1700-talet")}>1700-talet</button>
-                    <button onClick={() => handleCategoryButtonClick("1800-talet")}>1800-talet</button>
-                    <button onClick={() => handleCategoryButtonClick("1900-talet")}>1900-talet</button>
-                </div>
-            </div>
-
+            <h1 className="Prod-Header">Time Travelers historieböcker</h1>
             <ul className="prod-ul">
-                {
-                    products.map(product => <ProductListItem
+                {products.map(product => (
+                    <ProductListItem
                         key={product.id}
                         productData={product}
-                    />)
-                }
+                        onAddToCart={addToCart}
+                    />
+                ))}
             </ul>
+            <KartPopup
+                isKartPopupVisible={isKartPopupVisible}
+                onClose={closeKartPopup}
+                cartItems={cartItems}
+            />
         </div>
     );
-}
+};
 
 export default Product;
+
