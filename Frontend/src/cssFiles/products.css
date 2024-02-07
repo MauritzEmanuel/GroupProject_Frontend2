@@ -1,13 +1,27 @@
+.sidan{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .Prod-Header {
     background-image: url('../assets/Images/History/historia.png');
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     margin: 1em;
     height: 9em;
+    width: 990px
+}
+
+.knappar{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .prod-ul {
