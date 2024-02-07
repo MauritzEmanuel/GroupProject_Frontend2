@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import ProductListItem from "../components/ProductlistItem"
+import ProductListItem from "../components/ProductlistItem";
 import KartPopup from "../components/KartPopup";
 import "../cssFiles/products.css";
 

@@ -51,7 +51,7 @@
             border: 1px solid black;
             border-radius: 10px;
             margin-bottom: 20px;
-            background-color: #f3f3f3;
+            background-color: #b7c3ae;
     
             .lev-h3 {
                 text-align: center;
@@ -103,7 +103,7 @@
             border: 1px solid black;
             border-radius: 10px;
             margin-bottom: 20px;
-            background-color: #f3f3f3;
+            background-color: #b7c3ae;
             display: grid;
             gap: 15px;
               
@@ -150,7 +150,8 @@
         font-size: 20px;
         font-weight: bold;
         border-radius: 10px;
-        color: #325119;
+        background-color: #b7c3ae;
+        color: black;
         cursor: pointer;
     }
     .button:hover {
