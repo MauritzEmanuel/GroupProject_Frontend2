@@ -58,9 +58,9 @@ const Home = () => {
             <p>1700 - TALET</p>
             <strong>Ken Follett speglar 1700-talets turbulenta anda genom en intensiv berättelse som väver samman individuella strävanden och historiska omvälvningar. Romanen framhäver upplysningstidens idéer om rättvisa och mänsklig förmåga, parallellt med den era då politisk och social förändring formade världen. </strong>
             <span>Klicka på knappen för fler bra titlar om 1700-talet. </span>
-            <Link to='/products' className='explore-button'>Visa alla</Link>
+            <Link to='/products/:id' className='explore-button'>Visa alla</Link>
         </div>
-        <Link to='/products' className='image'> 
+        <Link to='/products/:id' className='image'> 
             <img src={image1700s} alt="1700s" />
         </Link>
         </div>
@@ -70,9 +70,9 @@ const Home = () => {
             <p>1800 - TALET</p>
             <strong>En ingående analys av Napoleon Bonapartes militära strategier och kampanjer som formade Europa i början av 1800-talet.Olofssons arbete belyser de revolutionerande förändringarna i krigsföring som Napoleon introducerade, vilka fortfarande studeras av militärhistoriker idag. </strong>
             <span>Klicka på knappen för att bläddra i vår samling. </span>
-            <Link to='/products' className='explore-button'>Visa alla</Link>
+            <Link to='/products/:id' className='explore-button'>Visa alla</Link>
         </div>
-        <Link to='/products' className='image'> 
+        <Link to='/products/:id' className='image'> 
             <img src={image1800s} alt="1800s" />
         </Link>
         </div> 
@@ -82,9 +82,9 @@ const Home = () => {
             <p>1900 - TALET</p>
             <strong>Katja Hoyer utforskar det dagliga livet och de politiska dynamikerna i Östtyskland, bortom de stereotypa bilderna av Berlinmuren och kalla kriget. Boken avslöjar de komplexa verkligheterna av livet under östtysk övervakning och statlig kontroll, och hur dessa erfarenheter skilde sig från och liknade livet i väst.</strong>
             <span>Klicka på knappen för att välja fler av våra titlar. </span>
-            <Link to='/products' className='explore-button'>Visa alla</Link>
+            <Link to='/products/:id' className='explore-button'>Visa alla</Link>
         </div>
-            <Link to='/products' className='image'> 
+            <Link to='/products/:id' className='image'> 
             <img src={image1900s} alt="1900s" />
         </Link>
         </div>            

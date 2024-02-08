@@ -73,7 +73,7 @@ const CheckOut = () => {
                             <div className="lev-cont-line">
                                 <div className="lev-line"></div>
                             </div>
-                            <p className="lev-time">Leveransen tar 2-4 arbetsdagar</p>
+                            <p className="lev-time">Leveransen tar 3-5 arbetsdagar</p>
                         </div>
                     </div>
                 </div>
@@ -235,7 +235,7 @@ const CheckOut = () => {
                     </div>
 
                     <div className="checkOut-btn">
-                        <button className="button" onClick={handleSubmit}>
+                        <button className="button" onChange={handleChange} onClick={handleSubmit}>
                             Bekräfta information
                         </button>
                     </div>
