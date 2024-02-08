@@ -11,7 +11,7 @@ const Product = () => {
 
     const getData = async () => {
         try {
-            const response = await axios.get(`http://localhost:1337/api/categories/${id}?populate[Products][populate]=*`);
+            const response = await axios.get(`http://localhost:1337/api/categories/7?populate[Products][populate]=*`);
 
             const formattedProducts = []
 

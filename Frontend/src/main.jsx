@@ -12,6 +12,7 @@ import CheckOut from './pages/CheckOut.jsx'
 import Information from './pages/Information.jsx'
 import BestSelling from './pages/BestSelling.jsx'
 import Confirmation from './pages/Confirmation.jsx'
+import SpecificProduct from "./pages/SpecificProduct.jsx";
 
 
 /*const CartArr = [] = useState([]) */
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: '/products/:id',
     element: <Product/>
+  },
+  {
+    path: '/specificProduct',
+    element: <SpecificProduct/>
   },
   {
     path: '/checkOut',
