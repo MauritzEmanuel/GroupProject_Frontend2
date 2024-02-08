@@ -11,15 +11,22 @@ const Product = () => {
 
     const getData = async () => {
         try {
-            const response = await axios.get("http://localhost:1337/api/products?populate=*");
-            const formattedProducts = response.data.data.map(item => ({
-                id: item.id,
-                title: item.attributes.Title,
-                author: item.attributes.Author,
-                price: item.attributes.Price,
-                image: item.attributes.Image.data.attributes.url
+            const response = await axios.get(`http://localhost:1337/api/categories/${id}?populate[Products][populate]=*`);
 
-            }));
+            const formattedProducts = []
+
+            console.log(response.data.data.attributes.Products.data)
+
+            response.data.data.attributes.Products.data.forEach(item => {
+                formattedProducts.push({
+                    id: item.id,
+                    title: item.attributes.Title,
+                    author: item.attributes.Author,
+                    price: item.attributes.Price,
+                    image: item.attributes.Image?.data.attributes.url
+
+                })
+            });
             setProducts(formattedProducts);
         } catch (error) {
             console.error("Error fetching product data:", error);
