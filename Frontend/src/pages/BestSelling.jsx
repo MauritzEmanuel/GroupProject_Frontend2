@@ -1,6 +1,6 @@
-// import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-// const BestSelling = () => {
+const BestSelling = () => {
 //     const [bestSellingBooks, setBestSellingBooks] = useState([]);
 
 //     useEffect(() => {
@@ -28,7 +28,8 @@
 //                 ))}
 //             </ul>
 //         </div>
-//     );
+};
+
+export default BestSelling;
 
 
-// export default BestSelling;
