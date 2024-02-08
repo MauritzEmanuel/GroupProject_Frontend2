@@ -9,7 +9,7 @@ export const useFormContext = () => useContext(FormContext);
 // En Provider-komponent för att tillhandahålla formulärdatan
 export const FormProvider = ({ children }) => {
   const [formData, setFormData] = useState({
-    homeLev: "",
+    homeLev: "Hemleverans",
     firstName: "",
     lastName: "",
     email: "",
