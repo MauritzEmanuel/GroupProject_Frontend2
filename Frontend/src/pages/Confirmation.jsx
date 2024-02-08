@@ -37,7 +37,7 @@ const Confirmation = () => {
             
             <div className="conf-left-right">
                 <div className="conf-left">
-                    <h3>Du har köpt:</h3>
+                    <h3 className="left-h3">Du har köpt:</h3>
                 </div>
 
                 <div className="conf-right">

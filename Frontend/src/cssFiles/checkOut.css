@@ -32,6 +32,17 @@
         justify-content: space-evenly;
         font-size: 18px;
     }
+
+    .kart-cont-line {
+        display: flex;
+        justify-content: center;
+
+        .kart-line {
+            width: 50%;
+            height: 1px;
+            background-color: black;
+        }
+    }
 }
 
 .checkOut-lev {
