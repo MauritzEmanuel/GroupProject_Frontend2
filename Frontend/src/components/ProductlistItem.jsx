@@ -1,9 +1,13 @@
 import React from 'react';
 import '../cssFiles/kart.css';
+import { useCart } from '../contexts/CartContext.jsx';
+
 
 const ProductListItem = ({ productData, onAddToCart }) => {
+    const { addToCart } = useCart();
+
     const handleAddToCart = () => {
-        onAddToCart(productData);
+        addToCart(productData);
     };
 
     return (

@@ -10,6 +10,8 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
   background-color: rgb(248, 248, 248);
   color: #325119;
   font-style: italic;
@@ -29,7 +31,7 @@
   top: 25px;
   right: 10px;
   font-size: 30px;
-  border: none;
+ border-radius: 30px;
   padding: 0;
   box-shadow: none;
 }
@@ -51,11 +53,6 @@
   margin-right: auto;
   
 }
-.varukorg .content img {
-  max-width: 100%; /* Ensure the image does not exceed its container width */
-  height: auto; /* Maintain the image's aspect ratio */
-  display: block; /* Ensure the image is displayed as a block element */
-  margin-bottom: 10px; /* Add some space below each image */
-}
+
 
 
