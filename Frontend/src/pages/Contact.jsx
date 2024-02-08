@@ -13,7 +13,7 @@ const Contact = () => {
                 <p>
                     Tack för att du besöker Time Travelers! <br/>
                     För förfrågningar och frågor, fyll i formuläret! <br/>
-                    Vänligen vänta upp till 48 arbetsdagar för att få ett svar. <br/>
+                    Vänligen vänta upp till 48 timmar för att få ett svar. <br/>
                     Alla beställningar behandlas inom 3-5 arbetsdagar EXKLUSIVE helger och helgdagar.
                 </p>
             </div>
