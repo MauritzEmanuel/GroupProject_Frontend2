@@ -7,10 +7,9 @@
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  width: 550px;
-  height: 1000px;
-  background-color: #325119;
-  color: white;
+  width: 500px;
+  background-color: rgb(248, 248, 248);
+  color: #325119;
   font-style: italic;
 }
 
@@ -18,8 +17,12 @@
   display: block;
 }
 
+.varukorg.visible h1, .varukorg.visible p {
+  margin: 20px;
+}
+
 .close-button {
-  background-color: #325119;
+  background-color: rgb(248, 248, 248);
   position: absolute;
   top: 25px;
   right: 10px;
@@ -32,15 +35,18 @@
 .checkout-button {
   border-radius: 5px;
   padding: 10px 40px;
-  background-color: #325119;
-  width: 92%;
-  color: white;
-  font-size: 25px;
+  background-color: #b7c3ae;
+  width: auto;
+  color: black;
+  font-size: 23px;
   margin: 20px;
   text-align: center;
-  border: 2px solid white;
-  margin-top: 400px;
+  border: 1px solid black;
   font-style: italic;
+  display: block;
+  margin-top: 400px;
+  margin-left: auto;
+  margin-right: auto;
   
 }
 .varukorg .content img {
