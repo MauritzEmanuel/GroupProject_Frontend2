@@ -54,7 +54,7 @@ const Navbar = () => {
             </div>
             <ul className='ul-nav flex'>
               <li>
-                <a href={`/`}>Bästsäljande</a>
+                <a href={`/`}>Hem</a>
               </li>
               <li>
                 <a href={`/products/:id`}>Produkter</a>
