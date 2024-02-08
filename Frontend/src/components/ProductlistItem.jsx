@@ -1,11 +1,14 @@
 import React from 'react';
 import '../cssFiles/kart.css';
 import SpecificProduct from "../pages/SpecificProduct.jsx";
-import specificProduct from "../pages/SpecificProduct.jsx";
+import { useCart } from '../contexts/CartContext.jsx';
+
 
 const ProductListItem = ({ productData, onAddToCart }) => {
+    const { addToCart } = useCart();
+
     const handleAddToCart = () => {
-        onAddToCart(productData);
+        addToCart(productData);
     };
 
     return (

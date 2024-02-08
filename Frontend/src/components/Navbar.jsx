@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
+import { useCart } from '../contexts/CartContext.jsx';
 import '../cssFiles/navbar.css';
-import Kart from './KartPopup';
 import KartPopup from './KartPopup'; 
 import Logo from '../assets/Images/Logo/Logo-time-travelers.png'; 
 
 const Navbar = () => {
   const [isKartPopupVisible, setIsKartPopupVisible] = useState(false);
+  const { cart } = useCart();
 
   const handleKartClick = () => {
     setIsKartPopupVisible(!isKartPopupVisible);
+    
   };
   const handleCloseCart = () => {
     setIsKartPopupVisible(false);
   };
-
+ 
+  
   return (
     <>
       <header>
@@ -85,6 +88,9 @@ const Navbar = () => {
                 </g>
               </svg>
             </div>
+          </div>
+          <div>
+            Cart Items: {cart.length}
           </div>
         </nav>
 
