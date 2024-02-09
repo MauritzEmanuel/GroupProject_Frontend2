@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import { useFormContext } from '../contexts/FormContext.jsx';
 import '../cssFiles/checkOut.css';
-import Logo from '../assets/Images/Logo/Logo-time-travelers.png'
 
 
 const CheckOut = () => {
@@ -11,20 +10,33 @@ const CheckOut = () => {
 
     const { formData, updateFormData } = useFormContext();
 
-    const handleChange = (e) => {
-        const { name, value, type, checked } = e.target;
-        const newValue = type === 'checkbox' ? checked : value;
+    const handleFormChange = (event) => {
+        // Extrahera relevant information från event.target
+        const { name, value, type, checked } = event.target;
+        
+        // Bestämmer det uppdaterade värdet baserat på typen av formulärfältet
+        let updatedValue;
+        if (type === 'checkbox') {
+            updatedValue = checked;
+        } else {
+            updatedValue = value;
+        }
+    
+        // Uppdaterar formulärdatan med det nya värdet
         updateFormData({
-            [name]: newValue,
-        });
-        updateFormData({
-            [e.target.name]: e.target.value,
+            [name]: updatedValue
         });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        localStorage.setItem("checkoutData", JSON.stringify(formData));
+    const handleFormSubmit = (event) => {
+        // Förhindrar att formuläret skickas till en annan sida
+        event.preventDefault();
+        
+        // Sparar formulärdatan till den lokala lagringen
+        const checkoutData = JSON.stringify(formData);
+        localStorage.setItem("checkoutData", checkoutData);
+        
+        // Navigerar till bekräftelsesidan
         navigate("/confirmation");
     };
 
@@ -36,14 +48,27 @@ const CheckOut = () => {
                 
                 <header className="checkOut-header">
                     <a className="header-a" href={`/products/:id`}>&lt; HANDLA MER</a>
-                    <img className='header-img' src={Logo} alt="Logo" />
                 </header>
 
                 <div className="checkOut-kart">
                     <h1 className="kart-h1">Din Varukorg</h1>
                     {/* Varukorgen här? */}
+
+                    <div className="kart-cont-line">
+                        <div className="kart-line"></div>
+                    </div>
+
                     <div className="kart-div">
                         <p>Frakt</p> 
+                        <p>49 kr</p>
+                    </div>
+
+                    <div className="kart-cont-line">
+                        <div className="kart-line"></div>
+                    </div>
+
+                    <div className="kart-div">
+                        <p>Att betala</p>
                         <p>49 kr</p>
                     </div>
                 </div>
@@ -63,7 +88,7 @@ const CheckOut = () => {
                                             name="homeLev" 
                                             id="homeLev" 
                                             value={formData.homeLev}
-                                            onChange={handleChange}
+                                            onChange={handleFormChange}
                                             required
                                         />
                                         <label for="homeLev">Hemleverans</label>
@@ -89,7 +114,7 @@ const CheckOut = () => {
                                         id="firstName" 
                                         name="firstName" 
                                         value={formData.firstName} 
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                         required 
                                     />
                                 </div>
@@ -101,7 +126,7 @@ const CheckOut = () => {
                                         id="lastName" 
                                         name="lastName" 
                                         value={formData.lastName}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                         required 
                                     />
                                 </div>
@@ -113,7 +138,7 @@ const CheckOut = () => {
                                         id="email" 
                                         name="email" 
                                         value={formData.email}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                         required 
                                     />
                                 </div>
@@ -129,7 +154,7 @@ const CheckOut = () => {
                                         id="streetName" 
                                         name="streetName" 
                                         value={formData.streetName}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                         required 
                                         />
                                 </div>
@@ -141,7 +166,7 @@ const CheckOut = () => {
                                         id="streetNr" 
                                         name="streetNr" 
                                         value={formData.streetNr}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                         required 
                                     />
                                 </div>
@@ -154,7 +179,7 @@ const CheckOut = () => {
                                         name="zipCode" 
                                         pattern="[0-9]{5,}" 
                                         value={formData.zipCode}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                         required 
                                     />
                                 </div>
@@ -166,7 +191,7 @@ const CheckOut = () => {
                                         id="county" 
                                         name="county" 
                                         value={formData.county}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                         required
                                     />
                                 </div>
@@ -186,7 +211,7 @@ const CheckOut = () => {
                                         id="cardName" 
                                         name="cardName" 
                                         value={formData.cardName}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                         required 
                                     />
                                 </div>
@@ -199,7 +224,7 @@ const CheckOut = () => {
                                         name="cardNr" 
                                         pattern="[0-9]{16,}" 
                                         value={formData.cardNr}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                         required 
                                     />
                                 </div>
@@ -212,7 +237,7 @@ const CheckOut = () => {
                                         name="ExpDate" 
                                         pattern="\d{2}/\d{2}" 
                                         value={formData.ExpDate}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                         required 
                                     />
                                 </div>
@@ -225,7 +250,7 @@ const CheckOut = () => {
                                         name="cvvNr" 
                                         pattern="[0-9]{3,}" 
                                         value={formData.cvvNr}
-                                        onChange={handleChange}
+                                        onChange={handleFormChange}
                                         required 
                                     />
                                 </div>
@@ -234,7 +259,13 @@ const CheckOut = () => {
                         </div>
 
                         <div className="checkOut-btn">
-                            <input type="submit" value="Bekräfta information" className="button" onChange={handleChange} onClick={handleSubmit}/>
+                            <input 
+                                type="submit" 
+                                value="Bekräfta information" 
+                                className="button" 
+                                onChange={handleFormChange} 
+                                onClick={handleFormSubmit}
+                            />
                         </div>
                     </div>
                 </form>
