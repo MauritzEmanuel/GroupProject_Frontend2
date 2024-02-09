@@ -27,8 +27,8 @@ const Home = () => {
     <div className='Home'>
 
     <section className='best-seller'>
-        <Link to='/bestSellers' className='highlight-section'>
-            <strong>Upptäck våra bästsäljande böcker </strong> 
+        <Link to='/products/:id' className='highlight-section'>
+            <strong>Upptäck våra fantastiska böcker </strong> 
             <span className='underline-text'>och låt dig förföras av litterära mästerverk!</span>
         </Link>
     </section>
@@ -58,7 +58,7 @@ const Home = () => {
             <p>1700 - TALET</p>
             <strong>Ken Follett speglar 1700-talets turbulenta anda genom en intensiv berättelse som väver samman individuella strävanden och historiska omvälvningar. Romanen framhäver upplysningstidens idéer om rättvisa och mänsklig förmåga, parallellt med den era då politisk och social förändring formade världen. </strong>
             <span>Klicka på knappen för fler bra titlar om 1700-talet. </span>
-            <Link to='/products/:id' className='explore-button'>Visa alla</Link>
+            <Link to='/products/:id/' className='explore-button'>Visa alla</Link>
         </div>
         <Link to='/products/:id' className='image'> 
             <img src={image1700s} alt="1700s" />
@@ -93,13 +93,13 @@ const Home = () => {
     <section className="subscribe-section">
          <div className='subscribe-content'>
             <div className='left'>
-                <h1>Sign up for our Newsletter</h1>
-                <h3>Go back in time with us.</h3>
+                <h1>Anmäl dig till vårt nyhetsbrev!</h1>
+                <h3>Gå tillbaka i tiden med oss.</h3>
             </div>
             <div className='right'>
                 <form>
-                    <input type="email" placeholder='Enter your email' />
-                    <button type="submit">Subscribe</button>
+                    <input type="email" placeholder='Ange din email' />
+                    <button type="submit">Prenumerera</button>
                 </form>
             </div>
         </div>    

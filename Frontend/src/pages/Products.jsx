@@ -1,43 +1,63 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState} from "react";
+import axios from 'axios';
 import ProductListItem from "../components/ProductlistItem";
 import KartPopup from "../components/KartPopup";
 import "../cssFiles/products.css";
-import axios from 'axios';
 
 const Product = () => {
 
     const [products, setProducts] = useState([]);
+    const [categories, setCategories] = useState([]);
     const [cartItems, setCartItems] = useState([]);
     const [isKartPopupVisible, setIsKartPopupVisible] = useState(false);
 
-
-    const getData = async () => {
+    const getAllProducts = async () => {
         try {
-            const response = await axios.get(`http://localhost:1337/api/categories/7?populate[Products][populate]=*`);
+            const response = await axios.get('http://localhost:1337/api/products?populate=*');
+            const formattedProducts = response.data.data.map(item => ({
+                id: item.id,
+                title: item.attributes.Title,
+                author: item.attributes.Author,
+                price: item.attributes.Price,
+                image: item.attributes.Image?.data.attributes.url
+            }));
+            setProducts(formattedProducts);
+        } catch (error) {
+            console.error("Error fetching all products:", error);
+        }
+    };
 
-            const formattedProducts = []
+    const getCategories = async () => {
+        try {
+            const response = await axios.get('http://localhost:1337/api/categories');
+            setCategories(response.data.data);
+        } catch (error) {
+            console.error("Error fetching categories:", error);
+        }
+    };
 
-            console.log(response.data.data.attributes.Products.data)
-
-            response.data.data.attributes.Products.data.forEach(item => {
-                formattedProducts.push({
+    const getProductsByCategoryName = async (categoryName) => {
+        try {
+            const category = categories.find(cat => cat.attributes.TimeCenturyInHistory === categoryName);
+            if (category) {
+                const response = await axios.get(`http://localhost:1337/api/categories/${category.id}?populate[Products][populate]=*`);
+                const formattedProducts = response.data.data.attributes.Products.data.map(item => ({
                     id: item.id,
                     title: item.attributes.Title,
                     author: item.attributes.Author,
                     price: item.attributes.Price,
                     image: item.attributes.Image?.data.attributes.url
-
-                })
-            });
-            setProducts(formattedProducts);
+                }));
+                setProducts(formattedProducts);
+            }
         } catch (error) {
-            console.error("Error fetching product data:", error);
+            console.error(`Error fetching products for category ${categoryName}:`, error);
         }
     };
 
     useEffect(() => {
-        getData();
+        getCategories();
+        getAllProducts();
     }, []);
 
     const addToCart = (product) => {
@@ -52,6 +72,21 @@ const Product = () => {
     return (
         <div className='sidan'>
             <h1 className="Prod-Header">Time Travelers historieböcker</h1>
+            
+            <div className="category-buttons">
+                <button onClick={getAllProducts}>Alla Böcker</button>
+
+                {categories.map(category => (
+                    <button
+                        key={category.id}
+                        onClick={() => getProductsByCategoryName(category.attributes.TimeCenturyInHistory)}
+                    >
+                        {category.attributes.TimeCenturyInHistory}
+                    </button>
+                ))}
+            </div>
+           
+           
             <ul className="prod-ul">
                 {products.map(product => (
                     <ProductListItem

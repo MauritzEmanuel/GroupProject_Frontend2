@@ -16,7 +16,7 @@ const AboutUs = ({ about }) => {
                     </p>
                 </div>
                 <div className="horizontal-content">
-                    <h2>Kuraterade krönikor</h2>
+                    <h2>Krönikor</h2>
                     <p className='paragraftre'>
                         Våra hyllor är inte röriga; De är kurerade. Varje bok är handplockad för att säkerställa en fängslande resa genom 1700-, 1800- och 1900-talen. Dyk in i elegansen i den viktorianska eran, bevittna revolutionerna som formade nationer och återupplev de tumultartade händelserna som definierade 1900-talet.
                     </p>
