@@ -11,9 +11,10 @@ const Product = () => {
     const [cartItems, setCartItems] = useState([]);
     const [isKartPopupVisible, setIsKartPopupVisible] = useState(false);
 
+
     const getData = async () => {
         try {
-            const response = await axios.get(`http://localhost:1337/api/categories/${id}?populate[Products][populate]=*`);
+            const response = await axios.get(`http://localhost:1337/api/categories/7?populate[Products][populate]=*`);
 
             const formattedProducts = []
 
@@ -64,6 +65,7 @@ const Product = () => {
                 isKartPopupVisible={isKartPopupVisible}
                 onClose={closeKartPopup}
                 cartItems={cartItems}
+
             />
         </div>
     );
