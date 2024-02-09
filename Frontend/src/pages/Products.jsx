@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import ProductListItem from "../components/ProductlistItem";
 import KartPopup from "../components/KartPopup";
 import "../cssFiles/products.css";
+import axios from 'axios';
 
 const Product = () => {
+
     const [products, setProducts] = useState([]);
     const [cartItems, setCartItems] = useState([]);
     const [isKartPopupVisible, setIsKartPopupVisible] = useState(false);
@@ -65,7 +67,7 @@ const Product = () => {
             />
         </div>
     );
+
 };
 
 export default Product;
-

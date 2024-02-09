@@ -40,7 +40,3 @@ const ProductListItem = ({ productData, onAddToCart }) => {
 
 export default ProductListItem;
 
-/*
-
-
-*/

@@ -10,7 +10,6 @@ import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import CheckOut from './pages/CheckOut.jsx'
 import Information from './pages/Information.jsx'
-import BestSelling from './pages/BestSelling.jsx'
 import Confirmation from './pages/Confirmation.jsx'
 
 
@@ -40,10 +39,6 @@ const router = createBrowserRouter([
   {
     path: '/information',
     element: <Information/>
-  },
-  {
-    path: '/bestSelling',
-    element: <BestSelling/>,
   },
   {
     path: '/confirmation',
