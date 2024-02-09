@@ -1,9 +1,14 @@
 import React from 'react';
 import '../cssFiles/kart.css';
+import SpecificProduct from "../pages/SpecificProduct.jsx";
+import { useCart } from '../contexts/CartContext.jsx';
+
 
 const ProductListItem = ({ productData, onAddToCart }) => {
+    const { addToCart } = useCart();
+
     const handleAddToCart = () => {
-        onAddToCart(productData);
+        addToCart(productData);
     };
 
     return (
@@ -21,7 +26,9 @@ const ProductListItem = ({ productData, onAddToCart }) => {
                 </li>
             </div>
             <div className='Knapparna'>
-                <button className='InfoButton'>Mer info</button>
+                <li className='InfoButton'>
+                    <a href={'/specificProduct'}>Mer info</a>
+                </li>
                 <button className='AddToCart'  onClick={handleAddToCart}>
                 <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" className="bi bi-cart4" stroke="#000000" strokeWidth="0.00016"> {/* Fixed strokeWidth attribute */}
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>

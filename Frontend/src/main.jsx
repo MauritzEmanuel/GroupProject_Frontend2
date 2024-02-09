@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import ReactDOM from 'react-dom/client'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import { FormProvider } from './contexts/FormContext.jsx';
+import { CartProvider } from './contexts/CartContext.jsx';
 import Home from './pages/Home.jsx'
 import Contact from './pages/Contact.jsx'
 import AboutUs from './pages/AboutUs.jsx'
@@ -12,6 +13,7 @@ import CheckOut from './pages/CheckOut.jsx'
 import Information from './pages/Information.jsx'
 import BestSelling from './pages/BestSelling.jsx'
 import Confirmation from './pages/Confirmation.jsx'
+import SpecificProduct from "./pages/SpecificProduct.jsx";
 
 
 /*const CartArr = [] = useState([]) */
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
     element: <Product/>
   },
   {
+    path: '/specificProduct',
+    element: <SpecificProduct/>
+  },
+  {
     path: '/checkOut',
     element: <CheckOut/>
   },
@@ -54,9 +60,11 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <FormProvider>
-      <Navbar/>
-      <RouterProvider router={router}/>
-      <Footer/>
+      <CartProvider>
+          <Navbar/>
+          <RouterProvider router={router}/>
+          <Footer/>
+      </CartProvider>
     </FormProvider>
   </React.StrictMode>
 )
