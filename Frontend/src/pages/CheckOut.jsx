@@ -72,6 +72,7 @@ const CheckOut = () => {
                         <p>49 kr</p>
                     </div>
                 </div>
+                
                 <form>
                     <div className="checkOut-lev">
                         <h1 className="lev-h1">Leveranssätt</h1>
@@ -156,7 +157,7 @@ const CheckOut = () => {
                                         value={formData.streetName}
                                         onChange={handleFormChange}
                                         required 
-                                        />
+                                    />
                                 </div>
                                 
                                 <div className="info-divs">
@@ -195,11 +196,10 @@ const CheckOut = () => {
                                         required
                                     />
                                 </div>
-                                
                             </div>
                         </div>
-                        
                     </div>
+
                     <div className="checkOut-info">
                         <h1 className="info-h1">Betalnings uppgifter</h1>
                         <div className="info-border-cont">
