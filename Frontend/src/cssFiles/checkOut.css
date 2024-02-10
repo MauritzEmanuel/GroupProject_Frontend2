@@ -16,31 +16,6 @@
     }
 }
 
-.checkOut-kart {
-
-
-    .kart-h1 {
-        text-align: center;
-    }
-
-    .kart-div {
-        display: flex;
-        justify-content: space-evenly;
-        font-size: 18px;
-    }
-
-    .kart-cont-line {
-        display: flex;
-        justify-content: center;
-
-        .kart-line {
-            width: 41.5%;
-            height: 1px;
-            background-color: black;
-        }
-    }
-}
-
 .checkOut-lev {
     
     .lev-h1 {

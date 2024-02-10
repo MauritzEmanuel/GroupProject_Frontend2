@@ -28,7 +28,6 @@ const Confirmation = () => {
         <div className="conf-all">
             <header className="checkOut-header">
                 <a className="header-a" href={`/products/:id`}>&lt; HANDLA MER</a>
-                <img className='header-img' src={Logo} alt="Logo" />
             </header>
             <div className="conf-thank">
                 <h1 className="thank-h1">Tack för att just du handlade hos oss!</h1>

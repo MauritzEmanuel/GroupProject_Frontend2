@@ -50,29 +50,6 @@ const CheckOut = () => {
                     <a className="header-a" href={`/products/:id`}>&lt; HANDLA MER</a>
                 </header>
 
-                <div className="checkOut-kart">
-                    <h1 className="kart-h1">Din Varukorg</h1>
-                    {/* Varukorgen här? */}
-
-                    <div className="kart-cont-line">
-                        <div className="kart-line"></div>
-                    </div>
-
-                    <div className="kart-div">
-                        <p>Frakt</p> 
-                        <p>49 kr</p>
-                    </div>
-
-                    <div className="kart-cont-line">
-                        <div className="kart-line"></div>
-                    </div>
-
-                    <div className="kart-div">
-                        <p>Att betala</p>
-                        <p>49 kr</p>
-                    </div>
-                </div>
-                
                 <form>
                     <div className="checkOut-lev">
                         <h1 className="lev-h1">Leveranssätt</h1>
