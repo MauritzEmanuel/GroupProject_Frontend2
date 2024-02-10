@@ -16,3 +16,55 @@
     margin-top: 2em;
     margin-bottom: 2em;
 }
+
+.Left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+}
+.Left img{
+    width: 70%;
+    height: 80%;
+}
+
+.Right{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.Right input{
+    width: 30px;
+}
+.Right button{
+    height: 10%;
+    width: 70%;
+    background-color: limegreen;
+    border-radius: 40px;
+    font-size: large;
+}
+
+.Description{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+.Description p{
+    width: 80%;
+    text-align: center;
+}
+
+.PriceAndQuantity{
+    height: 10%;
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
