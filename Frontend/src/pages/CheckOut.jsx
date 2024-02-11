@@ -10,8 +10,15 @@ const CheckOut = () => {
  
     const navigate = useNavigate(); 
     const { formData, updateFormData } = useFormContext();
+<<<<<<< HEAD
     const { cart } = useContext(CartContext); 
+=======
+    const { cart} = useContext(CartContext); // Access cart context
+>>>>>>> 1ab93849280a643cdd9a34efaf6798bd9cdd2277
     
+    
+    console.log(cart)
+
     const urlParams = new URLSearchParams(window.location.search);
     let totalPrice = parseInt(urlParams.get('totalPrice'));    
      totalPrice += 49
@@ -37,6 +44,7 @@ const CheckOut = () => {
         localStorage.setItem("checkoutData", checkoutData);
         
         navigate("/confirmation");
+
     };
       
 

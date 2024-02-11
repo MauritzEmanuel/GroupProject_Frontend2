@@ -3,12 +3,15 @@ import { CartContext } from '../contexts/CartContext.jsx';
 import '../cssFiles/kart.css';
 
 const KartPopup = ({ isKartPopupVisible, onClose }) => {
-  const { cart, removeFromCart, updateQuantity } = useContext(CartContext);
-
+  const { cart, removeFromCart, updateQuantity} = useContext(CartContext);
   const handleCheckout = () => {
     
-    const totalPrice = calculateTotalCartPrice();
-  window.location.href = `/CheckOut?totalPrice=${totalPrice}`;
+    const totalPrice = calculateTotalCartPrice(); // Call the calculateTotalCartPrice function to get the total price
+    // Perform any necessary operations for checkout, such as sending the cart items to the server or processing payment
+    // For demonstration purposes, let's just log the total price
+    console.log("Total Price:", totalPrice);
+    // Redirect to the checkout page
+    window.location.href = `/CheckOut?totalPrice=${totalPrice}`;
   };
 
   const handleQuantityChange = (item, quantity) => {
