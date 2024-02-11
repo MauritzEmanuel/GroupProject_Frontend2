@@ -1,33 +1,39 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useFormContext } from '../contexts/FormContext';
-import Logo from '../assets/Images/Logo/Logo-time-travelers.png'
-import Back from '../assets/Images/History/ValkommenAter.png'
-import '../cssFiles/confirmation.css'
+import Logo from '../assets/Images/Logo/Logo-time-travelers.png';
+import Back from '../assets/Images/History/ValkommenAter.png';
+import '../cssFiles/confirmation.css';
 import '../cssFiles/checkOut.css';
-import { CartContext } from "../contexts/CartContext";
+import { useCart } from "../contexts/CartContext";
 
 const Confirmation = () => {
     const { formData } = useFormContext();
-    const { cart } = useContext(CartContext); // Access cart items from context
-
+    const { cart, clearCart } = useCart(); // Corrected invocation to get cart items from context
+    
+    
+    useEffect(() => {
+        console.log("Cart items:", cart); // Log cart items for debugging
+    }, [cart]);
 
     let storedFormData = null;
     try {
-        // Försöker hämta och parsar formulärdatan från localStorage
+        // Attempt to retrieve and parse form data from localStorage
         const storedData = localStorage.getItem("checkoutData");
         if (storedData) {
             storedFormData = JSON.parse(storedData);
         }
     } 
     catch (error) {
-        // Om det uppstår fel vid parsning av datan
+        // Handle parsing error
         console.error('Error parsing stored data:', error);
     }
-
+    const handleShopMore = () => {
+        clearCart(); // Clear the cart
+    };
     return(
         <div className="conf-all">
             <header className="checkOut-header">
-                <a className="header-a" href={`/products/:id`}>&lt; HANDLA MER</a>
+                <a className="header-a" href={`/products/:id`} onClick={handleShopMore}>&lt; HANDLA MER </a>
             </header>
             <div className="conf-thank">
                 <h1 className="thank-h1">Tack för att just du handlade hos oss!</h1>
@@ -36,9 +42,14 @@ const Confirmation = () => {
             </div>
             
             <div className="conf-left-right">
+                
                 <div className="conf-left">
                     <h3 className="left-h3">Du har köpt:</h3>
-
+                    <ul>
+                        {cart.map(item => (
+                            <li key={item.id}>{item.title}</li>
+                        ))}
+                    </ul>
                 </div>
 
                 <div className="conf-right">

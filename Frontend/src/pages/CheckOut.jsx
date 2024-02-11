@@ -10,8 +10,11 @@ const CheckOut = () => {
  
     const navigate = useNavigate(); // Skapa en instans av useNavigate
     const { formData, updateFormData } = useFormContext();
-    const { cart } = useContext(CartContext); // Access cart context
+    const { cart} = useContext(CartContext); // Access cart context
     
+    
+    console.log(cart)
+
     const urlParams = new URLSearchParams(window.location.search);
     let totalPrice = parseInt(urlParams.get('totalPrice'));    
      totalPrice += 49
@@ -44,6 +47,7 @@ const CheckOut = () => {
         
         // Navigerar till bekräftelsesidan
         navigate("/confirmation");
+
     };
       
 
