@@ -33,8 +33,21 @@ export const CartProvider = ({ children }) => {
     setCart(prevCart => prevCart.filter(item => item.id !== itemId));
   };
 
-  const addToCart = (item) => {
-    setCart(prevCart => [...prevCart, item]);
+  const addToCart = (newItem) => {
+    setCart((prevCart) => {
+      const existingItemIndex = prevCart.findIndex(item => item.id === newItem.id);
+      if (existingItemIndex > -1) {
+        const updatedCart = [...prevCart];
+        const existingItem = updatedCart[existingItemIndex];
+        updatedCart[existingItemIndex] = {
+          ...existingItem,
+          quantity: existingItem.quantity + 1
+        };
+        return updatedCart;
+      } else {
+        return [...prevCart, { ...newItem, quantity: 1 }];
+      }
+    });
   };
 
   const clearCart = () => {

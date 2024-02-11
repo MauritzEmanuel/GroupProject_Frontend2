@@ -8,39 +8,26 @@ import { useCart } from "../contexts/CartContext";
 
 const Confirmation = () => {
     const { formData } = useFormContext();
-<<<<<<< HEAD
-    const { cart } = useContext(CartContext); 
+    const { cart, clearCart } = useCart(); 
 
-
-    let storedFormData = null;
-    try {
-=======
-    const { cart, clearCart } = useCart(); // Corrected invocation to get cart items from context
-    
-    
     useEffect(() => {
-        console.log("Cart items:", cart); // Log cart items for debugging
+        console.log("Cart items:", cart);
     }, [cart]);
 
     let storedFormData = null;
     try {
-        // Attempt to retrieve and parse form data from localStorage
->>>>>>> 1ab93849280a643cdd9a34efaf6798bd9cdd2277
         const storedData = localStorage.getItem("checkoutData");
         if (storedData) {
             storedFormData = JSON.parse(storedData);
         }
     } 
     catch (error) {
-<<<<<<< HEAD
-=======
-        // Handle parsing error
->>>>>>> 1ab93849280a643cdd9a34efaf6798bd9cdd2277
         console.error('Error parsing stored data:', error);
     }
     const handleShopMore = () => {
-        clearCart(); // Clear the cart
+        clearCart();
     };
+
     return(
         <div className="conf-all">
             <header className="checkOut-header">
@@ -78,4 +65,4 @@ const Confirmation = () => {
     )
 }
 
-export default Confirmation;
+export default Confirmation

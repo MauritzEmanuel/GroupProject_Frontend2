@@ -37,7 +37,7 @@ const ProductListItem = ({ productData }) => {
     
 
     return (
-        <div className='HelaSkiten'>
+        <div className='Productlist-content'>
             <div className="Produkterna">
                 <li key={productData.id} className="cart-item">
                     <div className='SuperBox'>

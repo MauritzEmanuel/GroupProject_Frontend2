@@ -14,6 +14,7 @@
   background-color: rgb(248, 248, 248);
   color: #325119;
   font-style: italic;
+  padding-left: 20px;
 }
 
 .varukorg.visible {
@@ -26,19 +27,25 @@
 .cart-item {
   display: flex; 
   align-items: center; 
+  margin-bottom: 20px;
 }
 
 .item-details {
   margin-left: 10px; 
+  flex-grow: 1;
 }
 
 .varukorg.visible .item-details p {
   margin: 5px 0; 
 }
 
+.varukorg.visible .item-details input[type="number"] {
+  width: 60px;
+  height: 20px;
+  margin-right: 10px;
+}
 
 .varukorg.visible .content .close-button {
-  background-color: rgb(248, 248, 248);
   position: absolute;
   top: 25px;
   right: 10px;
@@ -51,20 +58,24 @@
 
 .varukorg.visible .checkout-button {
   border-radius: 5px;
-  padding: 10px 40px;
+  padding: 10px 30px;
   background-color: #b7c3ae;
   width: auto;
   color: black;
-  font-size: 23px;
+  font-size: 20px;
   margin: 20px;
   text-align: center;
   border: 1px solid black;
   font-style: italic;
   display: block;
-  margin-top: 170px;
+  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
+}
+
+.varukorg.visible .checkout-button:hover {
+  background-color: #98a490;
 }
 
 

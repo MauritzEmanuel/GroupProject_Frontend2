@@ -1,20 +1,27 @@
+.checkOut-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .checkOut-content .checkOut-header {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     background-color: white;
-    justify-content: center;
     margin-top: 3em;
     margin-bottom: 3em;
+}
     
-    .header-a {
+.checkOut-content .header-a {
         text-decoration: none;
         color: #325119;
         cursor: pointer;
         font-weight: bold;
         font-size: 20px;
     }
-}
 
 .checkOut-content .checkOut-lev {
     
@@ -91,7 +98,7 @@
               
             .info-divs {
                 display: flex;
-                justify-content: center;
+                justify-content: end;
                 gap: 1em;
             }
 

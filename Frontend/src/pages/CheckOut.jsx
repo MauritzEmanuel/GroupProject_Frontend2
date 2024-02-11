@@ -10,12 +10,7 @@ const CheckOut = () => {
  
     const navigate = useNavigate(); 
     const { formData, updateFormData } = useFormContext();
-<<<<<<< HEAD
-    const { cart } = useContext(CartContext); 
-=======
-    const { cart} = useContext(CartContext); // Access cart context
->>>>>>> 1ab93849280a643cdd9a34efaf6798bd9cdd2277
-    
+    const { cart } = useContext(CartContext);     
     
     console.log(cart)
 
@@ -78,7 +73,7 @@ const CheckOut = () => {
                                         <label htmlFor="homeLev">Hemleverans</label>
                                     </div>
                                     <p>49 kr</p>
-                                    <p>Total Price: {totalPrice}</p>
+                                    <p>Total Pris: {totalPrice}:-</p>
 
                                 </div>
                                 <div className="lev-cont-line">

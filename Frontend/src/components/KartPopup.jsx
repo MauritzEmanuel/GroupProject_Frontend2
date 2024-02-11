@@ -5,12 +5,9 @@ import '../cssFiles/kart.css';
 const KartPopup = ({ isKartPopupVisible, onClose }) => {
   const { cart, removeFromCart, updateQuantity} = useContext(CartContext);
   const handleCheckout = () => {
-    
-    const totalPrice = calculateTotalCartPrice(); // Call the calculateTotalCartPrice function to get the total price
-    // Perform any necessary operations for checkout, such as sending the cart items to the server or processing payment
-    // For demonstration purposes, let's just log the total price
+
+    const totalPrice = calculateTotalCartPrice(); 
     console.log("Total Price:", totalPrice);
-    // Redirect to the checkout page
     window.location.href = `/CheckOut?totalPrice=${totalPrice}`;
   };
 
@@ -39,7 +36,7 @@ const KartPopup = ({ isKartPopupVisible, onClose }) => {
   return (
     <div className={`varukorg ${isKartPopupVisible ? 'visible' : ''}`}>
       <div className='content'>
-        <h1>Varukorg - Cart items {cart.length}</h1>
+        <h1>Varukorg - Produkter {cart.length}</h1>
         <button className='close-button' onClick={onClose}>X</button>
         <hr />
         {cart && cart.length > 0 ? (
@@ -49,25 +46,25 @@ const KartPopup = ({ isKartPopupVisible, onClose }) => {
                 <img style={{ width: "100px", height: "165px" }} src={`http://localhost:1337${item.image}`} alt={item.title} />
                 <div className="item-details">
                   <p>{item.title}</p>
-                  <p>Price: {item.price}</p>
+                  <p>Pris: {item.price}:-</p>
                   <input
                     type="number"
                     value={item.quantity || ''}
                     onChange={(e) => handleQuantityChange(item, parseInt(e.target.value))}
                   />
-                  <p>Total Price: {calculateTotalPrice(item)}</p>
-                  <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                  <p>Total: {calculateTotalPrice(item)}:-</p>
+                  <button onClick={() => removeFromCart(item.id)}>Ta bort</button>
                 </div>
               </div>
             ))}
-            <p>Total Cart Price: {calculateTotalCartPrice()}</p>
+            <p>Total Pris: {calculateTotalCartPrice()}:-</p>
           </div>
         ) : (
-          <p>Your cart is empty</p>
+          <p>Din varukorg är tom.</p>
         )}
       </div>
       <button className='checkout-button' onClick={handleCheckout}>
-        Check out
+        Checka ut
       </button>
     </div>
   );

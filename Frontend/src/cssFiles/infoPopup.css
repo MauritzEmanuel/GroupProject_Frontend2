@@ -5,6 +5,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    padding: 2rem;
     background-color: rgba(0, 0, 0, 0.5); 
     display: flex;
     align-items: center; 
@@ -19,6 +20,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     width: 80%; 
     max-width: 500px; 
+    max-height: 80vh;
     text-align: center;
     position: relative;
     overflow-y: auto;
