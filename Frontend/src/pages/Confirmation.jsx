@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 import { useFormContext } from '../contexts/FormContext';
-import Logo from '../assets/Images/Logo/Logo-time-travelers.png';
 import Back from '../assets/Images/History/ValkommenAter.png';
 import '../cssFiles/confirmation.css';
 import '../cssFiles/checkOut.css';
