@@ -22,7 +22,6 @@ body {
 .about-us-container h1 {
     margin: 0;
     font-size: 2.5em;
-    color: #333;
 }
 
 .about-us-container p {
@@ -46,9 +45,7 @@ body {
     margin: 10px; 
 }
 
-.about-us-container h2,
-.about-us-container h3,
-.about-us-container h4 {
+.about-us-container h2 {
     font-size: 1.8em;
 }
 

@@ -49,7 +49,7 @@ const CheckOut = () => {
 
     return (
         <>
-            <div>
+            <div className="checkOut-content">
                 
                 <header className="checkOut-header">
                     <a className="header-a" href={`/products/:id`}>&lt; HANDLA MER</a>

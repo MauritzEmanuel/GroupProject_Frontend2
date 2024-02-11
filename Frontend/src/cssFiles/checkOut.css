@@ -1,4 +1,4 @@
-.checkOut-header {
+.checkOut-content .checkOut-header {
     display: flex;
     align-items: center;
     width: 100%;
@@ -16,7 +16,7 @@
     }
 }
 
-.checkOut-lev {
+.checkOut-content .checkOut-lev {
     
     .lev-h1 {
         text-align: center;
@@ -68,7 +68,7 @@
     
 }
 
-.checkOut-info {
+.checkOut-content .checkOut-info {
 
     .info-h1 {
         text-align: center;
@@ -121,7 +121,7 @@
     }
 }
 
-.checkOut-btn {
+.checkOut-content .checkOut-btn {
     display: flex;
     justify-content: center;
     padding-top: 2em;

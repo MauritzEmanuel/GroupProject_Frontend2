@@ -12,10 +12,7 @@ import Footer from './components/Footer.jsx'
 import CheckOut from './pages/CheckOut.jsx'
 import Information from './pages/Information.jsx'
 import Confirmation from './pages/Confirmation.jsx'
-import SpecificProduct from "./pages/SpecificProduct.jsx";
-
-
-/*const CartArr = [] = useState([]) */
+import InfoPopup from "./components/InfoPopup.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,8 +32,8 @@ const router = createBrowserRouter([
     element: <Product/>
   },
   {
-    path: '/specificProduct',
-    element: <SpecificProduct />
+    path: '/infoPopup',
+    element: <InfoPopup />
   },
   {
     path: '/checkOut',
