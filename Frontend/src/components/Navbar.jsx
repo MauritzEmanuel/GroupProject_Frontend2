@@ -89,9 +89,7 @@ const Navbar = () => {
               </svg>
             </div>
           </div>
-          <div>
-            Cart Items: {cart.length}
-          </div>
+       
         </nav>
 
         <div className={isKartPopupVisible ? 'kart-popup visible' : 'kart-popup'}>

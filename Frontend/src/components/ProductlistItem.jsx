@@ -1,11 +1,11 @@
 import React from 'react';
 import '../cssFiles/kart.css';
-import SpecificProduct from "../pages/SpecificProduct.jsx";
+import { CartContext } from '../contexts/CartContext.jsx'; // Import the CartContext
 import { useCart } from '../contexts/CartContext.jsx';
 
 
-const ProductListItem = ({ productData, onAddToCart }) => {
-    const { addToCart } = useCart();
+const ProductListItem = ({ productData }) => {
+    const { addToCart } = React.useContext(CartContext); 
 
     const handleAddToCart = () => {
         addToCart(productData);
@@ -26,9 +26,7 @@ const ProductListItem = ({ productData, onAddToCart }) => {
                 </li>
             </div>
             <div className='Knapparna'>
-                <li className='InfoButton'>
-                    <a href={'/specificProduct'}>Mer info</a>
-                </li>
+                <button className='InfoButton'>Mer info</button>
                 <button className='AddToCart'  onClick={handleAddToCart}>
                 <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000" className="bi bi-cart4" stroke="#000000" strokeWidth="0.00016"> {/* Fixed strokeWidth attribute */}
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
@@ -47,3 +45,7 @@ const ProductListItem = ({ productData, onAddToCart }) => {
 
 export default ProductListItem;
 
+/*
+
+
+*/

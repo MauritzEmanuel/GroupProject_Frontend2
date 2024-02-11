@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useFormContext } from '../contexts/FormContext';
 import Logo from '../assets/Images/Logo/Logo-time-travelers.png'
 import Back from '../assets/Images/History/ValkommenAter.png'
@@ -6,10 +6,10 @@ import '../cssFiles/confirmation.css'
 import '../cssFiles/checkOut.css';
 import { CartContext } from "../contexts/CartContext";
 
-
 const Confirmation = () => {
-
     const { formData } = useFormContext();
+    const { cart } = useContext(CartContext); // Access cart items from context
+
 
     let storedFormData = null;
     try {
@@ -38,13 +38,14 @@ const Confirmation = () => {
             <div className="conf-left-right">
                 <div className="conf-left">
                     <h3 className="left-h3">Du har köpt:</h3>
+
                 </div>
 
                 <div className="conf-right">
                     <h3>Levereras till:</h3>
                     <p>Du valde {formData.homeLev}</p>
-                    <p>Namn {formData.firstName} {formData.lastName}</p>
-                    <p>Address</p>
+                    <p>Namn: {formData.firstName} {formData.lastName}</p>
+                    <p>Address:</p>
                     <p>{formData.streetName} {formData.streetNr}</p>
                     <p>{formData.zipCode} {formData.county}</p>
                     <p>All information skickas även på mailen</p>
@@ -55,4 +56,4 @@ const Confirmation = () => {
     )
 }
 
-export default Confirmation
+export default Confirmation;

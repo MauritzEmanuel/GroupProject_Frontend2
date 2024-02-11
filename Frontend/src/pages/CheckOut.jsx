@@ -1,14 +1,20 @@
-import React, {useState} from "react";
+import React, { useContext, useEffect, useState } from "react"; // Add useEffect to the import statement
 import { useNavigate } from 'react-router-dom';
 import { useFormContext } from '../contexts/FormContext.jsx';
+import { CartContext } from "../contexts/CartContext.jsx";
 import '../cssFiles/checkOut.css';
 
 
+
 const CheckOut = () => {
-
+ 
     const navigate = useNavigate(); // Skapa en instans av useNavigate
-
     const { formData, updateFormData } = useFormContext();
+    const { cart } = useContext(CartContext); // Access cart context
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    let totalPrice = parseInt(urlParams.get('totalPrice'));    
+     totalPrice += 49
 
     const handleFormChange = (event) => {
         // Extrahera relevant information från event.target
@@ -39,8 +45,7 @@ const CheckOut = () => {
         // Navigerar till bekräftelsesidan
         navigate("/confirmation");
     };
-
-
+      
 
     return (
         <>
@@ -69,9 +74,11 @@ const CheckOut = () => {
                                             onChange={handleFormChange}
                                             required
                                         />
-                                        <label for="homeLev">Hemleverans</label>
+                                        <label htmlFor="homeLev">Hemleverans</label>
                                     </div>
                                     <p>49 kr</p>
+                                    <p>Total Price: {totalPrice}</p> {/* Display total price */}
+
                                 </div>
                                 <div className="lev-cont-line">
                                     <div className="lev-line"></div>
