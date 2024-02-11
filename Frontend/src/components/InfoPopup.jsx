@@ -6,7 +6,7 @@ const InfoPopup = ({ details, onClose, onAddToCart }) => {
         <div className='info-popup'>
             <div className='info-content'>
                 <div className="info-left">
-                    <img src={details.image} alt={`Cover for ${details.title}`} className="info-image" />
+                    <img src={`http://localhost:1337${details.image}`} alt={`Cover for ${details.title}`} className="info-image" />
                 </div>
                 <div className="info-right">
                     <h2>{details.title}</h2>
