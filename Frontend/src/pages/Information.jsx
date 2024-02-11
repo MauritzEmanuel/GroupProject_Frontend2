@@ -30,7 +30,7 @@ const Information = () => {
             <h2>Köpvillkor</h2>
             <p>För att säkerställa en smidig och trevlig shoppingupplevelse, läs våra köpvillkor:</p>
             <ul>
-                <li>Betalningsmetoder: Vi accepterar [Faktura, Delbetalning, Visa, MasterCard, Trustly, Swish].</li>
+                <li>Betalningsmetoder: Vi accepterar [Kortbetalning].</li>
                 <li>Orderbekräftelse: Du kommer att få en orderbekräftelse via e-post när ditt köp är klart.</li>
                 <li>Avbokningar: Du kan avbryta din beställning inom [12] timmar efter att du lagt den. Kontakta oss omgående för hjälp.</li>
             </ul>

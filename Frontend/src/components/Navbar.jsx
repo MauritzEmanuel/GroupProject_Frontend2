@@ -93,7 +93,6 @@ const Navbar = () => {
         </nav>
 
         <div className={isKartPopupVisible ? 'kart-popup visible' : 'kart-popup'}>
-          {/* KartPopup content */}
           <KartPopup isKartPopupVisible={isKartPopupVisible} onClose={handleCloseCart} />
          
         </div>

@@ -26,7 +26,7 @@ const KartPopup = ({ isKartPopupVisible, onClose }) => {
     let total = 0;
   cart.forEach((item) => {
     const totalPrice = calculateTotalPrice(item);
-    if (!isNaN(totalPrice)) { // Check if totalPrice is not NaN
+    if (!isNaN(totalPrice)) { 
       total += totalPrice;
     }
   });

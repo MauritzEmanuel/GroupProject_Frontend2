@@ -32,6 +32,10 @@ body{
     font-size: 16px;
 }
 
+.footer .top .item span {
+    cursor: pointer;
+}
+
 .footer .top .item h1 {
     font-size: 18px;
     font-weight: 500;
@@ -66,5 +70,6 @@ body{
 }
 
 .footer .bottom .right img {
-        height: 90px;
+        height: 50px;
+        padding-bottom: 20px;
     }

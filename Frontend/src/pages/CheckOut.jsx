@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react"; // Add useEffect to the import statement
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { useFormContext } from '../contexts/FormContext.jsx';
 import { CartContext } from "../contexts/CartContext.jsx";
@@ -8,41 +8,34 @@ import '../cssFiles/checkOut.css';
 
 const CheckOut = () => {
  
-    const navigate = useNavigate(); // Skapa en instans av useNavigate
+    const navigate = useNavigate(); 
     const { formData, updateFormData } = useFormContext();
-    const { cart } = useContext(CartContext); // Access cart context
+    const { cart } = useContext(CartContext); 
     
     const urlParams = new URLSearchParams(window.location.search);
     let totalPrice = parseInt(urlParams.get('totalPrice'));    
      totalPrice += 49
 
     const handleFormChange = (event) => {
-        // Extrahera relevant information från event.target
         const { name, value, type, checked } = event.target;
         
-        // Bestämmer det uppdaterade värdet baserat på typen av formulärfältet
         let updatedValue;
         if (type === 'checkbox') {
             updatedValue = checked;
         } else {
             updatedValue = value;
         }
-    
-        // Uppdaterar formulärdatan med det nya värdet
         updateFormData({
             [name]: updatedValue
         });
     };
 
     const handleFormSubmit = (event) => {
-        // Förhindrar att formuläret skickas till en annan sida
         event.preventDefault();
         
-        // Sparar formulärdatan till den lokala lagringen
         const checkoutData = JSON.stringify(formData);
         localStorage.setItem("checkoutData", checkoutData);
         
-        // Navigerar till bekräftelsesidan
         navigate("/confirmation");
     };
       
@@ -77,7 +70,7 @@ const CheckOut = () => {
                                         <label htmlFor="homeLev">Hemleverans</label>
                                     </div>
                                     <p>49 kr</p>
-                                    <p>Total Price: {totalPrice}</p> {/* Display total price */}
+                                    <p>Total Price: {totalPrice}</p>
 
                                 </div>
                                 <div className="lev-cont-line">

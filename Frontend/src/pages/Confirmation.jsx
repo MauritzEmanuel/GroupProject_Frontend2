@@ -8,19 +8,17 @@ import { CartContext } from "../contexts/CartContext";
 
 const Confirmation = () => {
     const { formData } = useFormContext();
-    const { cart } = useContext(CartContext); // Access cart items from context
+    const { cart } = useContext(CartContext); 
 
 
     let storedFormData = null;
     try {
-        // Försöker hämta och parsar formulärdatan från localStorage
         const storedData = localStorage.getItem("checkoutData");
         if (storedData) {
             storedFormData = JSON.parse(storedData);
         }
     } 
     catch (error) {
-        // Om det uppstår fel vid parsning av datan
         console.error('Error parsing stored data:', error);
     }
 

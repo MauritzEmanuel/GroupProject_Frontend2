@@ -1,7 +1,7 @@
 .sidan{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
 
 .Prod-Header {
@@ -64,6 +64,7 @@
     width: 16em;
     height: 30em;
     align-items: center;
+    justify-content: center;
 }
 
 
@@ -87,7 +88,6 @@
     border-radius: 10px;
     box-shadow: 0 8px 20px 0 rgba(0,0,0,0.30);
     transition: 0.3s;
-
 }
 
 .SuperBox img:hover {
